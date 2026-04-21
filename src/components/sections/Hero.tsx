@@ -175,7 +175,7 @@ export default function Hero() {
           className="mt-20 grid grid-cols-3 gap-8 max-w-lg mx-auto"
         >
           {[
-            { value: "50+", label: "Projekte" },
+            { value: "100%", label: "Festpreisgarantie" },
             { value: "100%", label: "Zufriedenheit" },
             { value: "3×", label: "Schneller" },
           ].map((stat) => (

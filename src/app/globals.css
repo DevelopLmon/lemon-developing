@@ -13,9 +13,6 @@
   --blur: 16px;
 }
 
-* {
-  cursor: none;
-}
 
 html {
   scroll-behavior: smooth;

@@ -10,8 +10,8 @@ const contactMethods = [
         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.19h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
       </svg>
     ),
-    label: "+49 176 0000 0000",
-    sub: "Mo bis Fr, 9 bis 18 Uhr",
+    label: "+49 176 84066170",
+    sub: "Mo bis So, 9 bis 22 Uhr",
     color: "#E8E440",
   },
   {
@@ -21,7 +21,7 @@ const contactMethods = [
       </svg>
     ),
     label: "WhatsApp",
-    sub: "Schnelle Antwort, auch abends",
+    sub: "Sofortige Antwort",
     color: "#22c55e",
   },
   {
@@ -31,16 +31,16 @@ const contactMethods = [
         <polyline points="2,4 12,13 22,4" />
       </svg>
     ),
-    label: "hello@lemon-developing.de",
+    label: "support@coresites-studio.de",
     sub: "Antwort innerhalb von 24 Stunden",
     color: "#7C3AED",
   },
 ];
 
 const nextSteps = [
-  "Wir melden uns innerhalb von 24h persönlich bei dir",
-  "Kurzes Gespräch über deine Ziele und Wünsche",
-  "Du bekommst ein maßgeschneidertes Angebot",
+  "Wir melden uns schnellstmöglich bei dir",
+  "Kurzes Briefing über deine Wünsche & Anforderungen",
+  "Du erhältst ein passgenaues Angebot",
 ];
 
 export default function Contact() {
@@ -53,8 +53,17 @@ export default function Contact() {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
+    await fetch("/api/kontakt", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+    setLoading(false);
     setSent(true);
   };
 
@@ -90,12 +99,12 @@ export default function Contact() {
             Kostenlos &amp; unverbindlich
           </span>
           <h2 className="font-heading font-black text-4xl md:text-6xl text-text-primary leading-tight">
-            Bereit für deinen neuen
+            Bereit für deine neue
             <br />
-            <span className="text-gradient-lemon">Internetauftritt?</span>
+            <span className="text-gradient-lemon">Website?</span>
           </h2>
           <p className="text-text-muted mt-4 text-lg max-w-xl mx-auto">
-            Schreib uns oder ruf uns direkt an. Wir melden uns persönlich bei dir.
+            Kontaktiere uns einfach per Nachricht oder ruf uns direkt an. Wir melden uns garantiert bei dir.
           </p>
         </motion.div>
 
@@ -135,7 +144,7 @@ export default function Contact() {
                       required
                       value={form.name}
                       onChange={handleChange}
-                      placeholder="Max Mustermann"
+                      placeholder="Felix Mustermann"
                       className="w-full px-4 py-2.5 rounded-xl text-sm text-text-primary placeholder:text-white/25 outline-none transition-all"
                       style={{
                         background: "rgba(255,255,255,0.05)",
@@ -156,7 +165,7 @@ export default function Contact() {
                       required
                       value={form.email}
                       onChange={handleChange}
-                      placeholder="max@beispiel.de"
+                      placeholder="felix@beispiel.de"
                       className="w-full px-4 py-2.5 rounded-xl text-sm text-text-primary placeholder:text-white/25 outline-none transition-all"
                       style={{
                         background: "rgba(255,255,255,0.05)",
@@ -190,7 +199,7 @@ export default function Contact() {
                       name="company"
                       value={form.company}
                       onChange={handleChange}
-                      placeholder="Dein Laden / Firma"
+                      placeholder="Dein Unternehmen"
                       className="w-full px-4 py-2.5 rounded-xl text-sm text-text-primary placeholder:text-white/25 outline-none transition-all"
                       style={{
                         background: "rgba(255,255,255,0.05)",
@@ -210,7 +219,7 @@ export default function Contact() {
                     value={form.message}
                     onChange={handleChange}
                     rows={4}
-                    placeholder="Erzähl uns kurz, was du brauchst..."
+                    placeholder="Erzähl uns kurz, was du benötigst..."
                     className="w-full px-4 py-2.5 rounded-xl text-sm text-text-primary placeholder:text-white/25 outline-none resize-none transition-all"
                     style={{
                       background: "rgba(255,255,255,0.05)",
@@ -223,7 +232,8 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-heading font-bold text-sm text-bg-base transition-all duration-300 hover:scale-[1.02]"
+                  disabled={loading}
+                  className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-heading font-bold text-sm text-bg-base transition-all duration-300 hover:scale-[1.02] disabled:opacity-60 disabled:cursor-not-allowed"
                   style={{
                     background: "linear-gradient(135deg, #E8E440, #B8B430)",
                     boxShadow: "0 0 30px rgba(232,228,64,0.35)",
@@ -233,10 +243,10 @@ export default function Contact() {
                     <line x1="22" y1="2" x2="11" y2="13" />
                     <polygon points="22 2 15 22 11 13 2 9 22 2" />
                   </svg>
-                  Kostenlos &amp; unverbindlich anfragen
+                  Kostenlos &amp; direkt anfragen
                 </button>
                 <p className="text-center text-text-muted text-xs">
-                  Wir antworten innerhalb von 24 Stunden. Keine Spam-Mails, versprochen.
+                  Wir antworten garantiert innerhalb von 24 Stunden. 
                 </p>
               </form>
             )}
@@ -253,7 +263,7 @@ export default function Contact() {
             {/* Direct contact */}
             <div className="glass rounded-2xl p-6 flex flex-col gap-4">
               <h3 className="font-heading font-bold text-text-primary">
-                Oder direkt kontaktieren
+                Oder schnell kontaktieren
               </h3>
               {contactMethods.map((m) => (
                 <div key={m.label} className="flex items-start gap-4">
@@ -278,7 +288,7 @@ export default function Contact() {
             {/* Next steps */}
             <div className="glass rounded-2xl p-6 flex flex-col gap-4">
               <h3 className="font-heading font-bold text-text-primary">
-                Was passiert nach deiner Anfrage?
+                Was passiert danach?
               </h3>
               <div className="flex flex-col gap-3">
                 {nextSteps.map((step, i) => (

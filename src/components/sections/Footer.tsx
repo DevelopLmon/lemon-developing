@@ -1,4 +1,4 @@
-"use client";
+import Link from "next/link";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -14,38 +14,38 @@ export default function Footer() {
           {/* Logo */}
           <a href="#" className="flex items-center gap-1.5">
             <span className="font-heading font-black text-lemon text-lg leading-none">
-              Lemon
+              CoreSites
             </span>
             <span className="font-heading font-light text-text-muted text-base leading-none">
-              Developing
+              - Studio
             </span>
           </a>
 
           {/* Copyright */}
           <p className="text-text-muted text-sm text-center">
-            © {year} Lemon-Developing. Alle Rechte vorbehalten.
+            © {year} CoreSites-Studio. Alle Rechte vorbehalten.
           </p>
 
           {/* Legal links */}
           <div className="flex items-center gap-6">
-            <a
-              href="#"
+            <Link
+              href="/impressum"
               className="text-text-muted text-sm hover:text-lemon transition-colors"
             >
               Impressum
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/datenschutz"
               className="text-text-muted text-sm hover:text-lemon transition-colors"
             >
               Datenschutz
-            </a>
+            </Link>
           </div>
         </div>
 
         {/* Address line */}
         <p className="text-center text-white/20 text-xs">
-          Lemon-Developing · hello@lemon-developing.de
+          CoreSites-Studio · support@coresites-studio.de
         </p>
       </div>
     </footer>
