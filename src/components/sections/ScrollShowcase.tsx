@@ -14,7 +14,7 @@ function WebsitePreview() {
           <div className="w-3 h-3 rounded-full bg-green-500/60" />
         </div>
         <div className="flex-1 mx-4 h-6 rounded-md bg-white/6 flex items-center px-3">
-          <span className="text-white/30 text-xs font-mono">coresites-studio.de</span>
+          <span className="text-white/30 text-xs font-mono">www.coresites-studio.de</span>
         </div>
       </div>
 
@@ -29,37 +29,42 @@ function WebsitePreview() {
 
           {/* Badge */}
           <div className="text-[10px] text-yellow-400 mb-3 tracking-widest uppercase">
-            Webdesign & Development
+            Webdesign für lokale Unternehmen
           </div>
 
           {/* Headline */}
           <h1 className="text-2xl md:text-3xl font-black leading-tight mb-3">
-            Websites, die{" "}
+            Mehr Kunden für dein{" "}
             <span className="bg-gradient-to-r from-yellow-400 to-purple-500 bg-clip-text text-transparent">
-              Kunden bringen
+              lokales Business
             </span>
           </h1>
 
           {/* Subtext */}
           <p className="text-white/50 text-xs mb-4 max-w-xs">
-            Moderne Websites für Unternehmen, die mehr Anfragen und einen professionellen Auftritt wollen.
+            Wir erstellen Websites für Restaurants, Friseure, Praxen & Co., die dir planbar neue Anfragen und Kunden bringen.
           </p>
 
           {/* TRUST */}
-          <div className="flex gap-4 text-[10px] text-white/40 mb-5">
-            <span>✔ Schnell</span>
-            <span>✔ Modern</span>
-            <span>✔ Kundenfokus</span>
+          <div className="flex gap-4 text-[10px] text-white/40 mb-5 flex-wrap justify-center">
+            <span>✔ Mehr Anfragen</span>
+            <span>✔ Lokal sichtbar</span>
+            <span>✔ Conversion-optimiert</span>
           </div>
 
           {/* CTA */}
           <div className="flex gap-3">
-            <div className="px-4 py-2 rounded-lg text-xs font-bold text-black bg-yellow-400 shadow-lg hover:scale-105 transition">
-              Kostenlose Demo
-            </div>
-            <div className="px-4 py-2 rounded-lg text-xs border border-white/10 text-white/70 hover:bg-white/5 transition">
-              Portfolio
-            </div>
+            <a href="#kontakt" className="px-4 py-2 rounded-lg text-xs font-bold text-black bg-yellow-400 shadow-lg hover:scale-105 transition">
+              Kostenlose Analyse sichern
+            </a>
+            <a href="#portfolio" className="px-4 py-2 rounded-lg text-xs border border-white/10 text-white/70 hover:bg-white/5 transition">
+              Beispiele ansehen
+            </a>
+          </div>
+
+          {/* Zielgruppen */}
+          <div className="mt-6 text-[10px] text-white/40 max-w-xs">
+            Für Restaurants, Cafés, Friseure, Praxen, Handwerker, Fitnessstudios, Anwälte & lokale Unternehmen
           </div>
 
           {/* SERVICE CARDS */}
@@ -67,7 +72,7 @@ function WebsitePreview() {
             {[
               { label: "Webdesign", color: "#E8E440" },
               { label: "Development", color: "#9D5FF5" },
-              { label: "SEO", color: "#E8E440" },
+              { label: "Local SEO", color: "#E8E440" },
             ].map((s) => (
               <div
                 key={s.label}
@@ -92,19 +97,15 @@ export default function ScrollShowcase() {
       <ContainerScroll
         titleComponent={
           <div className="mb-6 text-center">
-            <span className="text-yellow-400 text-sm uppercase tracking-widest block mb-3">
-              Was wir bauen
-            </span>
-
             <h2 className="font-black text-4xl md:text-6xl text-white leading-tight">
               Websites, die{" "}
               <span className="bg-gradient-to-r from-yellow-400 to-purple-500 bg-clip-text text-transparent">
-                verkaufen
+                lokal Kunden bringen
               </span>
             </h2>
 
             <p className="text-white/50 mt-3 text-lg max-w-xl mx-auto">
-              Nicht nur schön – sondern darauf ausgelegt, neue Kunden zu gewinnen.
+              Für lokale Unternehmen entwickelt – damit du online sichtbar wirst und mehr Anfragen bekommst.
             </p>
           </div>
         }
