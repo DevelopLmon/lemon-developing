@@ -73,12 +73,11 @@ export default function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="font-mono text-lemon text-sm tracking-widest uppercase">
-            Unser Prozess
-          </span>
           <h2 className="section-heading mt-3">
             So läuft&apos;s bei{" "}
-            <span className="text-gradient-lemon">uns</span>
+            <span className="bg-gradient-to-r from-yellow-400 to-purple-500 bg-clip-text text-transparent">
+                uns
+              </span>
           </h2>
           <p className="section-subheading">
             Transparent, strukturiert und auf Augenhöhe — von Anfang an.

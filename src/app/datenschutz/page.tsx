@@ -77,7 +77,7 @@ export default function DatenschutzPage() {
             </p>
             <h3 className="font-semibold text-text-primary mt-4 mb-2">Hinweis zur verantwortlichen Stelle</h3>
             <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
-            <p className="mt-2">CodeSites-Studio<br />Leon Schächtel<br />Am Mühlenteich 5<br />27404 Zeven<br />E-Mail: support@coresites-studio.de</p>
+            <p className="mt-2">CodeSites-Studio<br />Leon Schächtel<br />Am Mühlenteich 5<br />27404 Zeven<br />E-Mail: info@coresites-studio.de</p>
           </section>
 
           <section>

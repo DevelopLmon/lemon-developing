@@ -54,8 +54,8 @@ export default function ImpressumPage() {
             </p>
             <p>
               E-Mail:{" "}
-              <a href="mailto:support@coresites-studio.de" className="hover:text-lemon transition-colors">
-                support@coresites-studio.de
+              <a href="mailto:info@coresites-studio.de" className="hover:text-lemon transition-colors">
+                info@coresites-studio.de
               </a>
             </p>
           </section>

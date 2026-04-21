@@ -74,11 +74,10 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="font-mono text-lemon text-sm tracking-widest uppercase">
-            Was wir bieten
-          </span>
           <h2 className="section-heading mt-3">
-            Unsere <span className="text-gradient-mixed">Leistungen</span>
+            Unsere <span className="bg-gradient-to-r from-yellow-400 to-purple-500 bg-clip-text text-transparent">
+                Leistungen
+              </span>
           </h2>
           <p className="section-subheading">
             Von der ersten Idee bis zum Launch — wir begleiten dich durch jeden

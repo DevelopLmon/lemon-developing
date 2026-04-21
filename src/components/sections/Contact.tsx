@@ -32,7 +32,7 @@ const contactMethods = [
         <polyline points="2,4 12,13 22,4" />
       </svg>
     ),
-    label: "support@coresites-studio.de",
+    label: "info@coresites-studio.de",
     sub: "Antwort innerhalb von 24 Stunden",
     color: "#7C3AED",
   },

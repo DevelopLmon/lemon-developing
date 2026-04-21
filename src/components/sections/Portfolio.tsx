@@ -53,7 +53,9 @@ export default function Portfolio() {
         >
           <h2 className="font-heading font-black text-4xl md:text-5xl text-text-primary leading-tight">
             Was unsere Kunden{" "}
-            <span className="text-gradient-lemon">bekommen</span>
+            <span className="bg-gradient-to-r from-yellow-400 to-purple-500 bg-clip-text text-transparent">
+                bekommen
+              </span>
           </h2>
           <p className="text-text-muted mt-4 text-base max-w-xl mx-auto">
             Keine Templates, keine Lösungen von der Stange. Jede Website entsteht individuell und passgenau für das jeweilige Unternehmen – hier sind zwei ausgewählte Beispiele.

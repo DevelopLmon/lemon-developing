@@ -327,7 +327,9 @@ export default function Pricing({ prices }: { prices?: PricesProps }) {
           </span>
           <h2 className="section-heading mt-3">
             Transparente{" "}
-            <span className="text-gradient-violet">Pakete</span>
+            <span className="bg-gradient-to-r from-yellow-400 to-purple-500 bg-clip-text text-transparent">
+                Pakete
+              </span>
           </h2>
           <p className="section-subheading">
             Klare Preise, kein Kleingedrucktes. Wähle das Paket, das zu deinem

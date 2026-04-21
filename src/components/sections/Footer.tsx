@@ -45,7 +45,7 @@ export default function Footer() {
 
         {/* Address line */}
         <p className="text-center text-white/20 text-xs">
-          CoreSites-Studio · support@coresites-studio.de
+          CoreSites-Studio · info@coresites-studio.de
         </p>
       </div>
     </footer>

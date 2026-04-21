@@ -103,12 +103,14 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <span className="font-mono text-lemon text-sm tracking-widest uppercase">
-            Häufige Fragen
-          </span>
-          <h2 className="section-heading mt-3">
-            FAQ
+
+          <h2 className="font-heading font-black text-4xl md:text-5xl text-text-primary leading-tight">
+            Du hast{" "}
+            <span className="bg-gradient-to-r from-yellow-400 to-purple-500 bg-clip-text text-transparent">
+                Fragen?
+              </span>
           </h2>
+          
           <p className="section-subheading">
             Alles, was du wissen möchtest — auf einen Blick.
           </p>
