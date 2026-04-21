@@ -15,7 +15,7 @@ const services = [
     description:
       "Interfaces, die begeistern — nicht nur funktionieren. Wir entwerfen visuell starke, nutzerfreundliche Designs, die deine Marke perfekt repräsentieren.",
     tags: ["Figma", "Prototyping", "Design System", "WCAG"],
-    accent: "lemon" as const,
+    accent: "blue" as const,
   },
   {
     icon: (
@@ -40,7 +40,7 @@ const services = [
     description:
       "Gefunden werden. Core Web Vitals. Echte Ergebnisse. Wir optimieren deine Website für maximale Sichtbarkeit und Ladegeschwindigkeit.",
     tags: ["Core Web Vitals", "Technical SEO", "Analytics", "Lighthouse"],
-    accent: "lemon" as const,
+    accent: "blue" as const,
   },
 ];
 
@@ -61,7 +61,7 @@ export default function Services() {
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
         style={{
-          background: "radial-gradient(ellipse, rgba(124,58,237,0.08) 0%, transparent 70%)",
+          background: "radial-gradient(ellipse, rgba(58,150,237,0.08) 0%, transparent 70%)",
         }}
       />
 
@@ -75,7 +75,7 @@ export default function Services() {
           className="text-center mb-16"
         >
           <h2 className="section-heading mt-3">
-            Unsere <span className="bg-gradient-to-r from-yellow-400 to-purple-500 bg-clip-text text-transparent">
+            Unsere <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 Leistungen
               </span>
           </h2>
@@ -102,9 +102,9 @@ export default function Services() {
                 {/* Icon */}
                 <div
                   className={`w-14 h-14 rounded-xl flex items-center justify-center ${
-                    service.accent === "lemon"
-                      ? "text-lemon bg-lemon/10"
-                      : "text-violet-bright bg-violet/10"
+                    service.accent === "violet"
+                      ? "text-violet-bright bg-violet/10"
+                      : "text-blue-400 bg-blue-400/10"
                   }`}
                 >
                   {service.icon}

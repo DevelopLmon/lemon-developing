@@ -7,7 +7,7 @@ interface GlassCardProps {
   children: ReactNode;
   className?: string;
   tilt?: boolean;
-  glowColor?: "lemon" | "violet" | "none";
+  glowColor?: "lemon" | "violet" | "blue" | "none";
 }
 
 export default function GlassCard({
@@ -26,6 +26,7 @@ export default function GlassCard({
   const glowMap = {
     lemon: "hover:border-lemon/30 hover:shadow-lemon-sm",
     violet: "hover:border-violet/30 hover:shadow-violet-sm",
+    blue: "hover:border-blue-400/30 hover:shadow-[0_0_30px_rgba(58,150,237,0.15)]",
     none: "",
   };
 
