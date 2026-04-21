@@ -14,6 +14,7 @@ const contactMethods = [
     label: "+49 176 84066170",
     sub: "Mo bis So, 9 bis 22 Uhr",
     color: "#E8E440",
+    href: "tel:+4917684066170",
   },
   {
     icon: (
@@ -36,6 +37,7 @@ const contactMethods = [
     label: "info@coresites-studio.de",
     sub: "Antwort innerhalb von 24 Stunden",
     color: "#7C3AED",
+    href: "mailto:info@coresites-studio.de",
   },
 ];
 
@@ -288,38 +290,21 @@ export default function Contact() {
               <h3 className="font-heading font-bold text-text-primary">
                 Oder schnell kontaktieren
               </h3>
-              {contactMethods.map((m) => {
-                const inner = (
-                  <>
-                    <div
-                      className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-200 group-hover:scale-110"
-                      style={{ background: `${m.color}18`, border: `1px solid ${m.color}30`, color: m.color }}
-                    >
-                      {m.icon}
-                    </div>
-                    <div>
-                      <p className="text-text-primary text-sm font-semibold">{m.label}</p>
-                      <p className="text-text-muted text-xs mt-0.5">{m.sub}</p>
-                    </div>
-                    {"href" in m && (
-                      <span className="ml-auto text-xs font-semibold px-2.5 py-1 rounded-full flex-shrink-0"
-                        style={{ background: `${m.color}18`, color: m.color, border: `1px solid ${m.color}30` }}>
-                        Schreiben →
-                      </span>
-                    )}
-                  </>
-                );
-                return "href" in m ? (
-                  <a key={m.label} href={(m as { href: string }).href} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-4 group rounded-xl p-2 -mx-2 transition-colors duration-200 hover:bg-white/[0.04]">
-                    {inner}
-                  </a>
-                ) : (
-                  <div key={m.label} className="flex items-start gap-4">
-                    {inner}
+              {contactMethods.map((m) => (
+                <a key={m.label} href={m.href} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-4 group rounded-xl p-2 -mx-2 transition-colors duration-200 hover:bg-white/[0.04]">
+                  <div
+                    className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-200 group-hover:scale-110"
+                    style={{ background: `${m.color}18`, border: `1px solid ${m.color}30`, color: m.color }}
+                  >
+                    {m.icon}
                   </div>
-                );
-              })}
+                  <div>
+                    <p className="text-text-primary text-sm font-semibold">{m.label}</p>
+                    <p className="text-text-muted text-xs mt-0.5">{m.sub}</p>
+                  </div>
+                </a>
+              ))}
             </div>
 
             {/* Next steps */}
