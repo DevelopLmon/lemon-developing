@@ -291,7 +291,20 @@ function PricingCard({ plan, index }: { plan: Plan; index: number }) {
   );
 }
 
-export default function Pricing() {
+interface PricesProps {
+  starter?: string;
+  pro?: string;
+  premium?: string;
+}
+
+export default function Pricing({ prices }: { prices?: PricesProps }) {
+  const livePlans = plans.map((plan) => ({
+    ...plan,
+    price:
+      plan.name === "Starter" ? (prices?.starter ?? plan.price) :
+      plan.name === "Pro" ? (prices?.pro ?? plan.price) :
+      (prices?.premium ?? plan.price),
+  }));
   return (
     <section id="pakete" className="relative py-28 px-6 overflow-hidden">
       {/* WebGL animated background */}
@@ -324,7 +337,7 @@ export default function Pricing() {
 
         {/* Cards */}
         <div className="flex flex-col md:flex-row gap-6 justify-center items-center md:items-stretch">
-          {plans.map((plan, i) => (
+          {livePlans.map((plan, i) => (
             <PricingCard key={plan.name} plan={plan} index={i} />
           ))}
         </div>
