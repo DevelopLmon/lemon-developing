@@ -11,7 +11,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   return (
     <div className="min-h-screen flex" style={{ background: "#07070f" }}>
       <AdminSidebarWrapper user={session.user!} />
-      <main className="flex-1 overflow-auto min-w-0 pt-[53px] md:pt-0">
+      <main className="flex-1 overflow-auto min-w-0 pt-14 md:pt-0">
         {children}
       </main>
     </div>
