@@ -57,7 +57,7 @@ export default function PortalSidebar({ user, onNavigate }: { user: { name?: str
         </div>
         <div>
           <p className="font-heading font-bold text-sm text-white leading-none">Kundenportal</p>
-          <p className="text-[10px] mt-0.5" style={{ color: "#8892A4" }}>Lemon-Developing</p>
+          <p className="text-[10px] mt-0.5" style={{ color: "#8892A4" }}>CoreSites-Studio</p>
         </div>
       </div>
 

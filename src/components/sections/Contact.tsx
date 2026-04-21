@@ -42,7 +42,7 @@ const contactMethods = [
 ];
 
 const nextSteps = [
-  "Wir melden uns schnellstmöglich bei dir",
+  "Ich melde mich schnellstmöglich bei dir",
   "Kurzes Briefing über deine Wünsche & Anforderungen",
   "Du erhältst ein passgenaues Angebot",
 ];
@@ -111,25 +111,15 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <span
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm text-text-muted mb-6"
-            style={{
-              background: "rgba(255,255,255,0.05)",
-              border: "1px solid rgba(255,255,255,0.1)",
-            }}
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8E440">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-            </svg>
-            Kostenlos &amp; unverbindlich
-          </span>
           <h2 className="font-heading font-black text-4xl md:text-6xl text-text-primary leading-tight">
             Bereit für deine neue
             <br />
-            <span className="text-gradient-lemon">Website?</span>
+            <span className="bg-gradient-to-r from-yellow-400 to-purple-500 bg-clip-text text-transparent">
+                Website?
+              </span>
           </h2>
           <p className="text-text-muted mt-4 text-lg max-w-xl mx-auto">
-            Kontaktiere uns einfach per Nachricht oder ruf uns direkt an. Wir melden uns garantiert bei dir.
+            Kontaktiere mich einfach per Nachricht oder ruf mich direkt an. Ich melden mich garantiert bei dir.
           </p>
         </motion.div>
 
@@ -154,7 +144,7 @@ export default function Contact() {
                   </svg>
                 </div>
                 <h3 className="font-heading font-bold text-xl text-text-primary">Nachricht gesendet!</h3>
-                <p className="text-text-muted text-sm">Wir melden uns innerhalb von 24 Stunden bei dir.</p>
+                <p className="text-text-muted text-sm">Ich melde mich innerhalb von 24 Stunden bei dir.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -271,7 +261,7 @@ export default function Contact() {
                   Kostenlos &amp; direkt anfragen
                 </button>
                 <p className="text-center text-text-muted text-xs">
-                  Wir antworten garantiert innerhalb von 24 Stunden. 
+                  Ich antworte garantiert innerhalb von 24 Stunden. 
                 </p>
               </form>
             )}

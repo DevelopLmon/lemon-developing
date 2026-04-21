@@ -9,7 +9,7 @@ function LoginForm() {
   const params = useSearchParams();
   const type = params.get("type") === "portal" ? "portal" : "admin";
 
-  const [email, setEmail] = useState("");
+  const [identifier, setIdentifier] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
@@ -20,11 +20,16 @@ function LoginForm() {
     setError("");
     setLoading(true);
 
-    const res = await signIn("credentials", { email, password, redirect: false });
+    const res = await signIn("credentials", {
+      identifier,
+      password,
+      loginType: type,
+      redirect: false,
+    });
     setLoading(false);
 
     if (res?.error) {
-      setError("E-Mail oder Passwort falsch.");
+      setError(isAdmin ? "Benutzername oder Passwort falsch." : "E-Mail oder Passwort falsch.");
       return;
     }
 
@@ -92,11 +97,8 @@ function LoginForm() {
         <div className="text-center">
           <h1 className="font-heading font-black text-4xl leading-tight"
             style={{ color: isAdmin ? "#E8E440" : "#F0F0F8" }}>
-            {isAdmin ? "CoreSites Studio" : "Mein Portal"}
+            {isAdmin ? "CoreSites - Studio" : "Kundenportal"}
           </h1>
-          <p className="text-sm mt-2" style={{ color: "#8892A4" }}>
-            {isAdmin ? "Sales Operating System" : "Melde dich an, um dein Projekt einzusehen"}
-          </p>
         </div>
 
         {/* Card */}
@@ -109,22 +111,22 @@ function LoginForm() {
             <p className="text-xs mt-1" style={{ color: "#8892A4" }}>
               {isAdmin
                 ? "Melde dich an, um fortzufahren"
-                : "Verwende die Zugangsdaten aus deiner Einladungs-E-Mail"}
+                : "Verwende die Zugangsdaten aus der E-Mail von mir"}
             </p>
           </div>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-            {/* Email */}
+            {/* Identifier */}
             <div className="flex flex-col gap-1.5">
               <label className="text-[11px] font-semibold tracking-widest" style={{ color: "#8892A4" }}>
-                E-MAIL
+                {isAdmin ? "BENUTZERNAME" : "E-MAIL"}
               </label>
               <input
-                type="email"
+                type={isAdmin ? "text" : "email"}
                 required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder={isAdmin ? "name@unternehmen.de" : "ihre@email.de"}
+                value={identifier}
+                onChange={(e) => setIdentifier(e.target.value)}
+                placeholder={isAdmin ? "benutzername" : "ihre@email.de"}
                 className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all"
                 style={{
                   background: "rgba(255,255,255,0.05)",
