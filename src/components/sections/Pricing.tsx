@@ -173,7 +173,7 @@ const plans: Plan[] = [
       "3 Monate Support",
       "Analytics Setup",
     ],
-    cta: "Jetzt starten",
+    cta: "Jetzt anfragen",
     popular: true,
   },
   {
@@ -189,7 +189,7 @@ const plans: Plan[] = [
       "12 Monate Wartung",
       "Prioritäts-Support",
     ],
-    cta: "Projekt besprechen",
+    cta: "Jetzt anfragen",
   },
 ];
 
@@ -269,24 +269,26 @@ function PricingCard({ plan, index }: { plan: Plan; index: number }) {
       </ul>
 
       {/* CTA */}
-      <RippleButton
-        className={`w-full py-3 rounded-xl font-heading font-semibold text-sm transition-all duration-300 ${
-          plan.popular
-            ? "text-bg-base"
-            : "text-text-primary border border-white/15 hover:border-lemon/30 hover:bg-white/5"
-        }`}
-        style={
-          plan.popular
-            ? {
-                background: "linear-gradient(135deg, #E8E440, #B8B430)",
-                boxShadow: "0 0 25px rgba(232,228,64,0.35)",
-              }
-            : {}
-        }
-        rippleColor={plan.popular ? "rgba(0,0,0,0.15)" : "rgba(232,228,64,0.15)"}
-      >
-        {plan.cta}
-      </RippleButton>
+      <a href="#kontakt">
+        <RippleButton
+          className={`w-full py-3 rounded-xl font-heading font-semibold text-sm transition-all duration-300 ${
+            plan.popular
+              ? "text-bg-base"
+              : "text-text-primary border border-white/15 hover:border-lemon/30 hover:bg-white/5"
+          }`}
+          style={
+            plan.popular
+              ? {
+                  background: "linear-gradient(135deg, #E8E440, #B8B430)",
+                  boxShadow: "0 0 25px rgba(232,228,64,0.35)",
+                }
+              : {}
+          }
+          rippleColor={plan.popular ? "rgba(0,0,0,0.15)" : "rgba(232,228,64,0.15)"}
+        >
+          {plan.cta}
+        </RippleButton>
+      </a>
     </motion.div>
   );
 }
