@@ -1,5 +1,4 @@
 import { prisma } from "@/lib/prisma";
-import type { Inquiry } from "@prisma/client";
 import InquiryActions from "@/components/admin/InquiryActions";
 
 export default async function AdminAnfragen() {
@@ -33,7 +32,7 @@ export default async function AdminAnfragen() {
               </tr>
             </thead>
             <tbody>
-              {inquiries.map((inq: Inquiry) => {
+              {inquiries.map((inq) => {
                 const s = statusColor(inq.status);
                 return (
                   <tr key={inq.id} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}
