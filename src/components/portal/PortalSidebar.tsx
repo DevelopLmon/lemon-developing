@@ -44,12 +44,12 @@ const navItems = [
   },
 ];
 
-export default function PortalSidebar({ user }: { user: { name?: string | null; email?: string | null } }) {
+export default function PortalSidebar({ user, onNavigate }: { user: { name?: string | null; email?: string | null }; onNavigate?: () => void }) {
   const pathname = usePathname();
 
   return (
     <aside className="w-60 flex-shrink-0 flex flex-col h-screen sticky top-0"
-      style={{ background: "rgba(255,255,255,0.03)", borderRight: "1px solid rgba(255,255,255,0.07)" }}>
+      style={{ background: "#0d0d18", borderRight: "1px solid rgba(255,255,255,0.07)" }}>
       <div className="px-5 py-5 flex items-center gap-3" style={{ borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
         <div className="w-8 h-8 rounded-lg flex items-center justify-center font-heading font-black text-lg flex-shrink-0"
           style={{ background: "linear-gradient(135deg, #E8E440, #B8B430)", color: "#0A0A12" }}>
@@ -63,7 +63,7 @@ export default function PortalSidebar({ user }: { user: { name?: string | null; 
 
       {/* Back to Startseite */}
       <div className="px-3 pt-3">
-        <Link href="/"
+        <Link href="/" onClick={onNavigate}
           className="flex items-center gap-2 px-3 py-2 rounded-xl text-xs transition-all duration-200 w-full"
           style={{ color: "#8892A4", border: "1px solid rgba(255,255,255,0.06)" }}
           onMouseEnter={(e) => { e.currentTarget.style.color = "#E8E440"; e.currentTarget.style.borderColor = "rgba(232,228,64,0.2)"; e.currentTarget.style.background = "rgba(232,228,64,0.05)"; }}
@@ -79,7 +79,7 @@ export default function PortalSidebar({ user }: { user: { name?: string | null; 
         {navItems.map((item) => {
           const active = item.href === "/portal" ? pathname === "/portal" : pathname.startsWith(item.href);
           return (
-            <Link key={item.href} href={item.href}
+            <Link key={item.href} href={item.href} onClick={onNavigate}
               className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200"
               style={{
                 background: active ? "rgba(232,228,64,0.1)" : "transparent",

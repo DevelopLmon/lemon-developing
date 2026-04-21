@@ -1,6 +1,6 @@
 import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
-import PortalSidebar from "@/components/portal/PortalSidebar";
+import PortalSidebarWrapper from "@/components/portal/PortalSidebarWrapper";
 
 export default async function PortalLayout({ children }: { children: React.ReactNode }) {
   const session = await auth();
@@ -8,8 +8,8 @@ export default async function PortalLayout({ children }: { children: React.React
 
   return (
     <div className="min-h-screen flex" style={{ background: "#07070f" }}>
-      <PortalSidebar user={session.user!} />
-      <main className="flex-1 overflow-auto">
+      <PortalSidebarWrapper user={session.user!} />
+      <main className="flex-1 overflow-auto min-w-0 pt-14 md:pt-0">
         {children}
       </main>
     </div>
