@@ -16,7 +16,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       async authorize(credentials) {
         if (!credentials?.identifier || !credentials?.password) return null;
 
-        const identifier = credentials.identifier as string;
+        const identifier = (credentials.identifier as string).toLowerCase().trim();
         const loginType = credentials.loginType as string;
 
         let user;
