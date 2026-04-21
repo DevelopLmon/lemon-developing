@@ -46,7 +46,7 @@ const navItems = [
   },
 ];
 
-export default function AdminSidebar({ user }: { user: { name?: string | null; email?: string | null } }) {
+export default function AdminSidebar({ user, onNavigate }: { user: { name?: string | null; email?: string | null }; onNavigate?: () => void }) {
   const pathname = usePathname();
 
   return (
@@ -67,7 +67,7 @@ export default function AdminSidebar({ user }: { user: { name?: string | null; e
       {/* Nav */}
       {/* Back to Startseite */}
       <div className="px-3 pt-3">
-        <Link href="/"
+        <Link href="/" onClick={onNavigate}
           className="flex items-center gap-2 px-3 py-2 rounded-xl text-xs transition-all duration-200 w-full"
           style={{ color: "#8892A4", border: "1px solid rgba(255,255,255,0.06)" }}
           onMouseEnter={(e) => { e.currentTarget.style.color = "#E8E440"; e.currentTarget.style.borderColor = "rgba(232,228,64,0.2)"; e.currentTarget.style.background = "rgba(232,228,64,0.05)"; }}
@@ -83,7 +83,7 @@ export default function AdminSidebar({ user }: { user: { name?: string | null; e
         {navItems.map((item) => {
           const active = item.href === "/admin" ? pathname === "/admin" : pathname.startsWith(item.href);
           return (
-            <Link key={item.href} href={item.href}
+            <Link key={item.href} href={item.href} onClick={onNavigate}
               className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200"
               style={{
                 background: active ? "rgba(232,228,64,0.1)" : "transparent",
