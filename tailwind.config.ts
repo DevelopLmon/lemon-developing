@@ -11,8 +11,8 @@ const config: Config = {
       colors: {
         "bg-base": "#0A0A12",
         "bg-card": "rgba(255,255,255,0.06)",
-        lemon: "#E8E440",
-        "lemon-dim": "#B8B430",
+        lemon: "#406ae8",
+        "lemon-dim": "#307fb8",
         violet: "#7C3AED",
         "violet-bright": "#9D5FF5",
         "text-primary": "#F0F0F8",
@@ -26,14 +26,14 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "lemon-glow":
-          "radial-gradient(ellipse at center, rgba(232,228,64,0.15) 0%, transparent 70%)",
+          "radial-gradient(ellipse at center, rgba(16,157,230,0.15) 0%, transparent 70%)",
         "violet-glow":
           "radial-gradient(ellipse at center, rgba(124,58,237,0.2) 0%, transparent 70%)",
       },
       boxShadow: {
-        "lemon-sm": "0 0 15px rgba(232,228,64,0.3)",
-        "lemon-md": "0 0 30px rgba(232,228,64,0.4)",
-        "lemon-lg": "0 0 60px rgba(232,228,64,0.25)",
+        "lemon-sm": "0 0 15px rgba(16,157,230,0.3)",
+        "lemon-md": "0 0 30px rgba(16,157,230,0.4)",
+        "lemon-lg": "0 0 60px rgba(16,157,230,0.25)",
         "violet-sm": "0 0 15px rgba(124,58,237,0.3)",
         "violet-md": "0 0 30px rgba(124,58,237,0.4)",
         glass: "0 8px 32px rgba(0,0,0,0.4)",

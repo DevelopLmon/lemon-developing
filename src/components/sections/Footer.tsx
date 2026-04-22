@@ -12,14 +12,11 @@ export default function Footer() {
         {/* Main row */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-1.5">
-            <span className="font-heading font-black text-lemon text-lg leading-none">
-              CoreSites
-            </span>
-            <span className="font-heading font-light text-text-muted text-base leading-none">
-              - Studio
-            </span>
-          </a>
+          <a href="#" className="flex items-center gap-2.5 group">
+          <span className="font-heading font-bold text-lg bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent transition-colors">
+            CoreSites<span className="text-white"> - </span>Studio
+          </span>
+        </a>
 
           {/* Copyright */}
           <p className="text-text-muted text-sm text-center">
@@ -30,13 +27,13 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <Link
               href="/impressum"
-              className="text-text-muted text-sm hover:text-lemon transition-colors"
+              className="text-text-muted text-sm hover:text-blue-400 transition-colors"
             >
               Impressum
             </Link>
             <Link
               href="/datenschutz"
-              className="text-text-muted text-sm hover:text-lemon transition-colors"
+              className="text-text-muted text-sm hover:text-blue-400 transition-colors"
             >
               Datenschutz
             </Link>

@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung | Lemon-Developing",
-  description: "Datenschutzerklärung von Lemon-Developing",
+  title: "Datenschutzerklärung | CoreSites-Studio",
+  description: "Datenschutzerklärung von CoreSites-Studio",
 };
 
 export default function DatenschutzPage() {
@@ -13,7 +13,7 @@ export default function DatenschutzPage() {
         {/* Back */}
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-text-muted text-sm hover:text-lemon transition-colors mb-10"
+          className="inline-flex items-center gap-2 text-text-muted text-sm hover:text-blue-400 transition-colors mb-10"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
             <path d="M19 12H5M5 12l7 7M5 12l7-7" />
@@ -24,7 +24,7 @@ export default function DatenschutzPage() {
         <h1 className="font-heading font-black text-4xl text-text-primary mb-2">
           Datenschutzerklärung
         </h1>
-        <div className="w-12 h-1 rounded-full mb-10" style={{ background: "linear-gradient(90deg, #E8E440, #7C3AED)" }} />
+        <div className="w-12 h-1 rounded-full mb-10" style={{ background: "linear-gradient(90deg, #109de6, #308fb8)" }} />
 
         <div
           className="rounded-2xl p-8 flex flex-col gap-8 text-sm text-text-muted leading-relaxed"
@@ -107,7 +107,7 @@ export default function DatenschutzPage() {
                 "Ihre Daten in einem gängigen Format zu erhalten (Art. 20 DSGVO)",
               ].map((right, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <span className="mt-1 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "#E8E440" }} />
+                  <span className="mt-1 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "#109de6" }} />
                   {right}
                 </li>
               ))}

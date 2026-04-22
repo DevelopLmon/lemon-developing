@@ -42,14 +42,14 @@ export default function LoadingScreen() {
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
           className="fixed inset-0 z-[99999] flex flex-col items-center justify-center overflow-hidden"
-          style={{ background: "#0A0A12" }}
+          style={{ background: "#0a0d12" }}
         >
           {/* Background radial glow */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "radial-gradient(ellipse 70% 50% at 50% 50%, rgba(124,58,237,0.18) 0%, transparent 70%)",
+                "radial-gradient(ellipse 70% 50% at 50% 50%, rgba(26,186,228,0.18) 0%, transparent 70%)",
             }}
           />
 
@@ -74,13 +74,13 @@ export default function LoadingScreen() {
               {/* Glow behind logo */}
               <div
                 className="absolute inset-0 rounded-2xl blur-2xl scale-150"
-                style={{ background: "rgba(232,228,64,0.25)" }}
+                style={{ background: "rgba(16,157,230,0.25)" }}
               />
               <div
                 className="relative w-20 h-20 rounded-2xl flex items-center justify-center font-heading font-black text-4xl text-bg-base"
                 style={{
-                  background: "linear-gradient(135deg, #E8E440, #B8B430)",
-                  boxShadow: "0 0 40px rgba(232,228,64,0.5)",
+                  background: "linear-gradient(135deg, #109de6, #308fb8)",
+                  boxShadow: "0 0 40px rgba(16,157,230,0.5)",
                 }}
               >
                 L
@@ -94,7 +94,7 @@ export default function LoadingScreen() {
               transition={{ delay: 0.35, duration: 0.5 }}
               className="flex items-baseline gap-1.5"
             >
-              <span className="font-heading font-black text-2xl text-lemon tracking-tight">
+              <span className="font-heading font-black text-2xl #109de6 tracking-tight">
                 CoreSites
               </span>
               <span className="font-heading font-light text-2xl text-white/50">
@@ -133,8 +133,8 @@ export default function LoadingScreen() {
                   className="h-full rounded-full"
                   style={{
                     width: `${progress}%`,
-                    background: "linear-gradient(90deg, #7C3AED, #E8E440)",
-                    boxShadow: "0 0 10px rgba(232,228,64,0.5)",
+                    background: "linear-gradient(90deg, #109de6, #308fb8)",
+                    boxShadow: "0 0 10px rgba(16,157,230,0.5)",
                   }}
                 />
               </div>

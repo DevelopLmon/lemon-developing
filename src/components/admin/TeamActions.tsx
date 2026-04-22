@@ -31,7 +31,7 @@ export function AddTeamMember() {
     <>
       <button onClick={() => setOpen(true)}
         className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all"
-        style={{ background: "linear-gradient(135deg, #E8E440, #B8B430)", color: "#0A0A12" }}>
+        style={{ background: "linear-gradient(135deg, #3a96ed, #308fb8)", color: "#0A0A12" }}>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
           <path d="M12 5v14M5 12h14" />
         </svg>
@@ -45,10 +45,10 @@ export function AddTeamMember() {
             <h2 className="font-heading font-bold text-xl text-white mb-5">Team-Mitglied hinzufügen</h2>
             <form onSubmit={submit} className="flex flex-col gap-4">
               {[
-                { label: "Name", key: "name", placeholder: "Max Mustermann", required: false },
-                { label: "Benutzername", key: "username", placeholder: "max", required: true },
-                { label: "E-Mail", key: "email", placeholder: "max@firma.de", required: true },
-                { label: "Passwort", key: "password", placeholder: "Sicheres Passwort", required: true },
+                { label: "Name", key: "name", placeholder: "Felix Mustermann", required: false },
+                { label: "Benutzername", key: "username", placeholder: "felix", required: true },
+                { label: "E-Mail", key: "email", placeholder: "felix@firma.de", required: true },
+                { label: "Passwort", key: "password", placeholder: "Dein Passwort", required: true },
               ].map(({ label, key, placeholder, required }) => (
                 <div key={key} className="flex flex-col gap-1.5">
                   <label className="text-xs font-semibold tracking-widest" style={{ color: "#8892A4" }}>{label.toUpperCase()}</label>
@@ -60,7 +60,7 @@ export function AddTeamMember() {
                     placeholder={placeholder}
                     className="w-full px-4 py-2.5 rounded-xl text-sm outline-none transition-all"
                     style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", color: "#F0F0F8" }}
-                    onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(232,228,64,0.4)")}
+                    onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(16,157,230,0.4)")}
                     onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)")}
                   />
                 </div>
@@ -74,7 +74,7 @@ export function AddTeamMember() {
                 </button>
                 <button type="submit" disabled={loading}
                   className="flex-1 py-2.5 rounded-xl text-sm font-semibold disabled:opacity-50"
-                  style={{ background: "linear-gradient(135deg, #E8E440, #B8B430)", color: "#0A0A12" }}>
+                  style={{ background: "linear-gradient(135deg, #3a96ed, #308fb8)", color: "#0A0A12" }}>
                   {loading ? "Wird erstellt..." : "Erstellen"}
                 </button>
               </div>

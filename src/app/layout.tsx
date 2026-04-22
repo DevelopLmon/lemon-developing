@@ -22,10 +22,10 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lemon-Developing | Webdesign & Development",
+  title: "CoreSites-Studio | Webdesign & Development",
   description:
     "Moderne Websites, die begeistern. Webdesign, Development und SEO aus einer Hand.",
-  keywords: ["Webdesign", "Development", "Next.js", "SEO", "Lemon-Developing"],
+  keywords: ["Webdesign", "Development", "Next.js", "SEO", "CoreSites-Studio"],
 };
 
 export default function RootLayout({

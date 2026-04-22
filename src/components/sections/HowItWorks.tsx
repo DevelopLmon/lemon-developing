@@ -60,7 +60,7 @@ export default function HowItWorks() {
       <div
         className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none"
         style={{
-          background: "radial-gradient(ellipse, rgba(232,228,64,0.07) 0%, transparent 70%)",
+          background: "radial-gradient(ellipse, rgba(16,157,230,0.07) 0%, transparent 70%)",
         }}
       />
 
@@ -75,7 +75,7 @@ export default function HowItWorks() {
         >
           <h2 className="section-heading mt-3">
             So läuft&apos;s bei{" "}
-            <span className="bg-gradient-to-r from-yellow-400 to-purple-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 uns
               </span>
           </h2>
@@ -87,7 +87,7 @@ export default function HowItWorks() {
         {/* Steps */}
         <div className="relative">
           {/* Connecting line (desktop) */}
-          <div className="hidden md:block absolute top-[3.5rem] left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-lemon/20 to-transparent" />
+          <div className="hidden md:block absolute top-[3.5rem] left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-blue-400/20 to-transparent" />
 
           <div className="grid md:grid-cols-4 gap-6">
             {steps.map((step, i) => (
@@ -105,13 +105,13 @@ export default function HowItWorks() {
                     <div
                       className="w-12 h-12 rounded-xl flex items-center justify-center text-bg-base flex-shrink-0"
                       style={{
-                        background: "linear-gradient(135deg, #E8E440, #B8B430)",
-                        boxShadow: "0 0 20px rgba(232,228,64,0.3)",
+                        background: "linear-gradient(135deg, #3a96ed, #308fb8)",
+                        boxShadow: "0 0 20px rgba(16,157,230,0.3)",
                       }}
                     >
                       {step.icon}
                     </div>
-                    <span className="font-mono text-3xl font-black text-lemon/20">
+                    <span className="font-mono text-3xl font-black text-blue-400/20">
                       {step.number}
                     </span>
                   </div>

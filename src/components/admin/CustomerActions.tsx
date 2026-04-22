@@ -47,7 +47,7 @@ export default function CustomerActions(props: Props) {
       <>
         <button onClick={() => setShowModal(true)}
           className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all"
-          style={{ background: "linear-gradient(135deg, #E8E440, #B8B430)", color: "#0A0A12" }}>
+          style={{ background: "linear-gradient(135deg, #109de6, #308fb8)", color: "#0A0A12" }}>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
             <path d="M12 5v14M5 12h14" />
           </svg>
@@ -62,9 +62,9 @@ export default function CustomerActions(props: Props) {
               <h3 className="font-heading font-bold text-white text-lg mb-5">Neuen Kunden anlegen</h3>
               <form onSubmit={createCustomer} className="flex flex-col gap-4">
                 {[
-                  { name: "name", label: "Name", placeholder: "Max Mustermann", type: "text" },
-                  { name: "email", label: "E-Mail", placeholder: "max@beispiel.de", type: "email" },
-                  { name: "password", label: "Passwort", placeholder: "Sicheres Passwort", type: "password" },
+                  { name: "name", label: "Name", placeholder: "Felix Mustermann", type: "text" },
+                  { name: "email", label: "E-Mail", placeholder: "felix@beispiel.de", type: "email" },
+                  { name: "password", label: "Passwort", placeholder: "Dein Passwort", type: "password" },
                 ].map((f) => (
                   <div key={f.name} className="flex flex-col gap-1.5">
                     <label className="text-xs" style={{ color: "#8892A4" }}>{f.label}</label>
@@ -73,7 +73,7 @@ export default function CustomerActions(props: Props) {
                       onChange={(e) => setForm({ ...form, [f.name]: e.target.value })}
                       className="px-4 py-2.5 rounded-xl text-sm outline-none"
                       style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", color: "#F0F0F8" }}
-                      onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(232,228,64,0.4)")}
+                      onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(16,157,230,0.4)")}
                       onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)")} />
                   </div>
                 ))}
@@ -86,7 +86,7 @@ export default function CustomerActions(props: Props) {
                   </button>
                   <button type="submit" disabled={loading}
                     className="flex-1 py-2.5 rounded-xl text-sm font-semibold disabled:opacity-50"
-                    style={{ background: "linear-gradient(135deg, #E8E440, #B8B430)", color: "#0A0A12" }}>
+                    style={{ background: "linear-gradient(135deg, #3a96ed, #308fb8)", color: "#0A0A12" }}>
                     {loading ? "Wird erstellt..." : "Anlegen"}
                   </button>
                 </div>

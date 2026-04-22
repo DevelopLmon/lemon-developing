@@ -7,7 +7,7 @@ const statusLabel: Record<string, string> = {
   BRIEFING: "Briefing", DESIGN: "Design", ENTWICKLUNG: "Entwicklung", REVIEW: "Review", LIVE: "Live 🎉",
 };
 const statusColor: Record<string, string> = {
-  BRIEFING: "#8892A4", DESIGN: "#7C3AED", ENTWICKLUNG: "#E8E440", REVIEW: "#E8A030", LIVE: "#22c55e",
+  BRIEFING: "#8892A4", DESIGN: "#7C3AED", ENTWICKLUNG: "#3a96ed", REVIEW: "#308fb8", LIVE: "#22c55e",
 };
 
 export default async function PortalDashboard() {
@@ -39,7 +39,7 @@ export default async function PortalDashboard() {
       {/* Quick stats */}
       <div className="grid grid-cols-3 gap-4 mb-8">
         {[
-          { label: "Projekte", value: projects.length, color: "#E8E440" },
+          { label: "Projekte", value: projects.length, color: "#3a96ed" },
           { label: "Dokumente", value: projects.flatMap((p) => p.documents).length, color: "#7C3AED" },
           { label: "Offene Rechnungen", value: openInvoices.length, color: openInvoices.length > 0 ? "#E8A030" : "#22c55e" },
         ].map((s) => (

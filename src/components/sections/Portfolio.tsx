@@ -11,7 +11,7 @@ const projects = [
     location: "Zeven",
     description:
       "Eine wunderschöne Website für das idyllische Dorf Bademühlen, mit Veranstaltungskalender, Ortsgeschichte und interaktiver Karte.",
-    accent: "#E8B840",
+    accent: "#3a96ed",
     href: "https://www.bademuehlen.com",
     image: "/portfolio/bademuehlen.jpg",
   },
@@ -21,7 +21,7 @@ const projects = [
     location: "Zeven",
     description:
       "Stimmungsvolles und authentisches Design mit Speisekarte und Kontaktinformationen zum Restaurant selbst.",
-    accent: "#E8A030",
+    accent: "#3a96ed",
     href: "https://pizzeria-allegria.vercel.app/",
     image: "/portfolio/allegria.jpg",
   },
@@ -31,7 +31,7 @@ const projects = [
     location: "Dein Ort",
     description:
       "Hier könnte deine Website stehen — individuell gestaltet, schnell gebaut, und genau auf dein Unternehmen zugeschnitten.",
-    accent: "#E8E440",
+    accent: "#3a96ed",
     href: "#kontakt",
     image: null,
   },
@@ -53,7 +53,7 @@ export default function Portfolio() {
         >
           <h2 className="font-heading font-black text-4xl md:text-5xl text-text-primary leading-tight">
             Was unsere Kunden{" "}
-            <span className="bg-gradient-to-r from-yellow-400 to-purple-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 bekommen
               </span>
           </h2>
@@ -124,9 +124,9 @@ export default function Portfolio() {
                     <div className="text-center">
                       <div
                         className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-3"
-                        style={{ background: "rgba(232,228,64,0.1)", border: "1px solid rgba(232,228,64,0.2)" }}
+                        style={{ background: "rgba(58,150,237,0.1)", border: "1px solid rgba(58,150,237,0.2)" }}
                       >
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8E440" strokeWidth="1.5" strokeLinecap="round">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3a96ed" strokeWidth="1.5" strokeLinecap="round">
                           <path d="M12 5v14M5 12h14" />
                         </svg>
                       </div>
@@ -139,7 +139,7 @@ export default function Portfolio() {
                 {project.image && (
                   <div
                     className="absolute top-8 right-3 z-20 flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wider"
-                    style={{ background: "linear-gradient(135deg, #E8E440, #B8B430)", color: "#0A0A12" }}
+                    style={{ background: "linear-gradient(135deg, #bababa, #bababa)", color: "#0A0A12" }}
                   >
                     <span className="relative flex w-1.5 h-1.5">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-600 opacity-75" />
@@ -190,7 +190,7 @@ export default function Portfolio() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center text-text-muted text-sm mt-10"
         >
-          ... und viele weitere. Jede Website ist ein Unikat — gebaut in unter 48 Stunden.
+          ... und viele weitere. Jede Website ist ein Unikat — gebaut mit viel Liebe und Sorgfalt.
         </motion.p>
       </div>
     </section>

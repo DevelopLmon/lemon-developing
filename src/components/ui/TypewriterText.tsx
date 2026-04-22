@@ -50,7 +50,7 @@ export default function TypewriterText({
   return (
     <span className={className}>
       {displayed}
-      <span className="animate-cursor-blink text-lemon ml-0.5">|</span>
+      <span className="animate-cursor-blink #109de6 ml-0.5">|</span>
     </span>
   );
 }

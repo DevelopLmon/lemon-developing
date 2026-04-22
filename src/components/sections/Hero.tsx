@@ -41,7 +41,7 @@ function ParticleCanvas() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(232,228,64,${p.alpha})`;
+        ctx.fillStyle = `rgba(16,157,230,${p.alpha})`;
         ctx.fill();
       });
 
@@ -55,7 +55,7 @@ function ParticleCanvas() {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(232,228,64,${0.08 * (1 - dist / 120)})`;
+            ctx.strokeStyle = `rgba(16,157,230,${0.08 * (1 - dist / 120)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -96,7 +96,7 @@ export default function Hero() {
         className="absolute inset-0 z-0"
         style={{
           background:
-            "radial-gradient(ellipse 80% 60% at 50% -10%, rgba(124,58,237,0.2) 0%, transparent 60%), radial-gradient(ellipse 50% 40% at 80% 80%, rgba(232,228,64,0.08) 0%, transparent 50%)",
+            "radial-gradient(ellipse 80% 60% at 50% -10%, rgba(58,150,237,0.2) 0%, transparent 60%), radial-gradient(ellipse 50% 40% at 80% 80%, rgba(16,157,230,0.08) 0%, transparent 50%)",
         }}
       />
 
@@ -112,8 +112,8 @@ export default function Hero() {
           className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full text-sm text-text-muted mb-8"
         >
           <span
-            className="w-2 h-2 rounded-full bg-lemon animate-glow-pulse"
-            style={{ boxShadow: "0 0 8px rgba(232,228,64,0.8)" }}
+            className="w-2 h-2 rounded-full #109de6 animate-glow-pulse"
+            style={{ boxShadow: "0 0 8px rgba(16,157,230,0.8)" }}
           />
           Webdesign & Development — Deutschland
         </motion.div>
@@ -126,7 +126,7 @@ export default function Hero() {
           className="font-heading font-black text-5xl md:text-7xl lg:text-8xl leading-[1.05] mb-6"
         >
           Wir bauen{" "}
-          <span className="text-gradient-lemon">digitale</span>
+          <span className="text-gradient-blue-400">digitale</span>
           <br />
           <span className="text-gradient-violet">Erlebnisse.</span>
         </motion.h1>
@@ -180,7 +180,7 @@ export default function Hero() {
             { value: "3×", label: "Schneller" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="font-heading font-black text-3xl text-gradient-lemon">
+              <div className="font-heading font-black text-3xl text-gradient-blue-400">
                 {stat.value}
               </div>
               <div className="text-text-muted text-sm mt-1">{stat.label}</div>

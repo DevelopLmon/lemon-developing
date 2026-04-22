@@ -50,8 +50,8 @@ function LoginForm() {
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none"
         style={{ background: isAdmin
-          ? "radial-gradient(ellipse 60% 50% at 50% 40%, rgba(232,228,64,0.07) 0%, transparent 70%)"
-          : "radial-gradient(ellipse 60% 50% at 50% 40%, rgba(124,58,237,0.08) 0%, transparent 70%)" }} />
+          ? "radial-gradient(ellipse 60% 50% at 50% 40%, rgba(16,157,230,0.07) 0%, transparent 70%)"
+          : "radial-gradient(ellipse 60% 50% at 50% 40%, rgba(58,150,237,0.08) 0%, transparent 70%)" }} />
 
       <div className="relative w-full max-w-sm flex flex-col items-center gap-6">
 
@@ -59,7 +59,7 @@ function LoginForm() {
         <a href="/"
           className="self-start flex items-center gap-1.5 text-xs transition-colors"
           style={{ color: "#8892A4" }}
-          onMouseEnter={(e) => (e.currentTarget.style.color = "#E8E440")}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "#3a96ed")}
           onMouseLeave={(e) => (e.currentTarget.style.color = "#8892A4")}
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -71,9 +71,9 @@ function LoginForm() {
         {/* Badge */}
         <div className="flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold"
           style={{
-            background: isAdmin ? "rgba(232,228,64,0.1)" : "rgba(255,255,255,0.07)",
-            border: isAdmin ? "1px solid rgba(232,228,64,0.25)" : "1px solid rgba(255,255,255,0.12)",
-            color: isAdmin ? "#E8E440" : "#F0F0F8",
+            background: isAdmin ? "rgba(16,157,230,0.1)" : "rgba(255,255,255,0.07)",
+            border: isAdmin ? "1px solid rgba(16,157,230,0.25)" : "1px solid rgba(255,255,255,0.12)",
+            color: isAdmin ? "#3a96ed" : "#F0F0F8",
           }}>
           {isAdmin ? (
             <>
@@ -96,7 +96,7 @@ function LoginForm() {
         {/* Heading */}
         <div className="text-center">
           <h1 className="font-heading font-black text-4xl leading-tight"
-            style={{ color: isAdmin ? "#E8E440" : "#F0F0F8" }}>
+            style={{ color: isAdmin ? "#3a96ed" : "#F0F0F8" }}>
             {isAdmin ? "CoreSites - Studio" : "Kundenportal"}
           </h1>
         </div>
@@ -133,7 +133,7 @@ function LoginForm() {
                   border: "1px solid rgba(255,255,255,0.1)",
                   color: "#F0F0F8",
                 }}
-                onFocus={(e) => (e.currentTarget.style.borderColor = isAdmin ? "rgba(232,228,64,0.4)" : "rgba(124,58,237,0.4)")}
+                onFocus={(e) => (e.currentTarget.style.borderColor = isAdmin ? "rgba(16,157,230,0.4)" : "rgba(58,150,237,0.4)")}
                 onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)")}
               />
             </div>
@@ -156,7 +156,7 @@ function LoginForm() {
                     border: "1px solid rgba(255,255,255,0.1)",
                     color: "#F0F0F8",
                   }}
-                  onFocus={(e) => (e.currentTarget.style.borderColor = isAdmin ? "rgba(232,228,64,0.4)" : "rgba(124,58,237,0.4)")}
+                  onFocus={(e) => (e.currentTarget.style.borderColor = isAdmin ? "rgba(16,157,230,0.4)" : "rgba(58,150,237,0.4)")}
                   onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)")}
                 />
                 <button
@@ -194,7 +194,7 @@ function LoginForm() {
               disabled={loading}
               className="w-full py-3 rounded-xl font-heading font-bold text-sm flex items-center justify-center gap-2 transition-all duration-200 mt-1 disabled:opacity-50"
               style={isAdmin
-                ? { background: "linear-gradient(135deg, #E8E440, #B8B430)", color: "#0A0A12", boxShadow: "0 0 20px rgba(232,228,64,0.2)" }
+                ? { background: "linear-gradient(135deg, #109de6, #308fb8)", color: "#0A0A12", boxShadow: "0 0 20px rgba(16,157,230,0.2)" }
                 : { background: "#F0F0F8", color: "#0A0A12" }
               }
             >
@@ -213,7 +213,7 @@ function LoginForm() {
           {isAdmin ? (
             <>
               Du bist Kunde?{" "}
-              <a href="/login?type=portal" style={{ color: "#E8E440" }}
+              <a href="/login?type=portal" style={{ color: "#3a96ed" }}
                 className="font-semibold hover:underline">
                 Kundenportal-Login →
               </a>
@@ -221,7 +221,7 @@ function LoginForm() {
           ) : (
             <>
               Du bist Teammitglied?{" "}
-              <a href="/login?type=admin" style={{ color: "#E8E440" }}
+              <a href="/login?type=admin" style={{ color: "#3a96ed" }}
                 className="font-semibold hover:underline">
                 Team-Login →
               </a>

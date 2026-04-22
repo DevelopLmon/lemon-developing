@@ -34,7 +34,7 @@ export default function AdminSidebarWrapper({ user }: { user: { name?: string | 
         <div className="flex items-center gap-2">
           <div
             className="w-7 h-7 rounded-lg flex items-center justify-center font-heading font-black text-sm"
-            style={{ background: "linear-gradient(135deg, #E8E440, #B8B430)", color: "#0A0A12" }}
+            style={{ background: "linear-gradient(135deg, #109de6, #308fb8)", color: "#0A0A12" }}
           >
             L
           </div>

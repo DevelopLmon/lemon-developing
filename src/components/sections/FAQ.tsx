@@ -48,11 +48,11 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.06 }}
       className={`glass rounded-xl overflow-hidden transition-all duration-300 ${
-        open ? "border-lemon/25" : "border-white/12 hover:border-white/20"
+        open ? "border-blue-400/25" : "border-white/12 hover:border-white/20"
       }`}
       style={{
-        borderColor: open ? "rgba(232,228,64,0.25)" : undefined,
-        boxShadow: open ? "0 0 20px rgba(232,228,64,0.06)" : undefined,
+        borderColor: open ? "rgba(16,157,230,0.25)" : undefined,
+        boxShadow: open ? "0 0 20px rgba(16,157,230,0.06)" : undefined,
       }}
     >
       <button
@@ -64,7 +64,7 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
           animate={{ rotate: open ? 45 : 0 }}
           transition={{ duration: 0.2 }}
           className={`flex-shrink-0 w-6 h-6 rounded-md flex items-center justify-center transition-colors ${
-            open ? "bg-lemon text-bg-base" : "bg-white/10 text-text-muted"
+            open ? "bg-blue-400 text-bg-base" : "bg-white/10 text-text-muted"
           }`}
         >
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -106,7 +106,7 @@ export default function FAQ() {
 
           <h2 className="font-heading font-black text-4xl md:text-5xl text-text-primary leading-tight">
             Du hast{" "}
-            <span className="bg-gradient-to-r from-yellow-400 to-purple-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 Fragen?
               </span>
           </h2>

@@ -35,17 +35,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2.5 group">
-          <div
-            className="w-8 h-8 rounded-lg flex items-center justify-center text-bg-base font-heading font-black text-sm"
-            style={{
-              background: "linear-gradient(135deg, #E8E440, #B8B430)",
-              boxShadow: "0 0 15px rgba(232,228,64,0.4)",
-            }}
-          >
-            L
-          </div>
-          <span className="font-heading font-bold text-lg text-text-primary group-hover:text-lemon transition-colors">
-            CoreSites<span className="text-lemon"> - </span>Studio
+          <span className="font-heading font-bold text-lg bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent transition-colors">
+            CoreSites<span className="text-white"> - </span>Studio
           </span>
         </a>
 
@@ -55,10 +46,10 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-text-muted hover:text-lemon transition-colors text-sm font-medium relative group"
+              className="text-text-muted hover:text-blue-400 transition-colors text-sm font-medium relative group"
             >
               {link.label}
-              <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-lemon transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-blue-400 transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </div>
@@ -69,12 +60,12 @@ export default function Navbar() {
             href="/login?type=admin"
             className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200"
             style={{
-              background: "rgba(232,228,64,0.08)",
-              border: "1px solid rgba(232,228,64,0.2)",
-              color: "#E8E440",
+              background: "rgba(16,157,230,0.08)",
+              border: "1px solid rgba(16,157,230,0.2)",
+              color: "#3a96ed",
             }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(232,228,64,0.15)"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(232,228,64,0.08)"; }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(16,157,230,0.15)"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(16,157,230,0.08)"; }}
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" />
@@ -132,7 +123,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="text-text-muted hover:text-lemon transition-colors font-medium"
+              className="text-text-muted hover:text-blue-400 transition-colors font-medium"
             >
               {link.label}
             </a>
@@ -141,7 +132,7 @@ export default function Navbar() {
             <a
               href="/login?type=admin"
               className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold"
-              style={{ background: "rgba(232,228,64,0.1)", border: "1px solid rgba(232,228,64,0.2)", color: "#E8E440" }}
+              style={{ background: "rgba(16,157,230,0.1)", border: "1px solid rgba(16,157,230,0.2)", color: "#3a96ed" }}
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" />

@@ -6,7 +6,7 @@ const statusLabel: Record<string, string> = {
   BRIEFING: "Briefing", DESIGN: "Design", ENTWICKLUNG: "Entwicklung", REVIEW: "Review", LIVE: "Live 🎉",
 };
 const statusColor: Record<string, string> = {
-  BRIEFING: "#8892A4", DESIGN: "#7C3AED", ENTWICKLUNG: "#E8E440", REVIEW: "#E8A030", LIVE: "#22c55e",
+  BRIEFING: "#8892A4", DESIGN: "#7C3AED", ENTWICKLUNG: "#3a96ed", REVIEW: "#E8A030", LIVE: "#22c55e",
 };
 
 export default async function PortalProjekte() {

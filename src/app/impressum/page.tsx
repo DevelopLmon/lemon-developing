@@ -13,7 +13,7 @@ export default function ImpressumPage() {
         {/* Back */}
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-text-muted text-sm hover:text-lemon transition-colors mb-10"
+          className="inline-flex items-center gap-2 text-text-muted text-sm hover:text-blue-400 transition-colors mb-10"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
             <path d="M19 12H5M5 12l7 7M5 12l7-7" />
@@ -25,7 +25,7 @@ export default function ImpressumPage() {
           Impressum
         </h1>
         <p className="text-sm text-muted-foreground mb-10">Angaben gemäß § 5 TMG / § 18 Abs. 2 MStV</p>
-        <div className="w-12 h-1 rounded-full mb-10" style={{ background: "linear-gradient(90deg, #E8E440, #7C3AED)" }} />
+        <div className="w-12 h-1 rounded-full mb-10" style={{ background: "linear-gradient(90deg, #109de6, #308fb8)" }} />
 
         <div
           className="rounded-2xl p-8 flex flex-col gap-8 text-sm text-text-muted leading-relaxed"
@@ -48,13 +48,13 @@ export default function ImpressumPage() {
             </h2>
             <p>
               Telefon:{" "}
-              <a href="tel:+4917684066170" className="hover:text-lemon transition-colors">
+              <a href="tel:+4917684066170" className="hover:text-blue-400 transition-colors">
                 +49 176 84066170
               </a>
             </p>
             <p>
               E-Mail:{" "}
-              <a href="mailto:info@coresites-studio.de" className="hover:text-lemon transition-colors">
+              <a href="mailto:info@coresites-studio.de" className="hover:text-blue-400 transition-colors">
                 info@coresites-studio.de
               </a>
             </p>

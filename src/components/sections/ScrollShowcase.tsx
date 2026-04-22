@@ -28,14 +28,14 @@ function WebsitePreview() {
         <div className="relative flex flex-col items-center justify-center py-10 px-8 text-center">
 
           {/* Badge */}
-          <div className="text-[10px] text-yellow-400 mb-3 tracking-widest uppercase">
+          <div className="text-[10px] ##109de6 mb-3 tracking-widest uppercase">
             Webdesign für lokale Unternehmen
           </div>
 
           {/* Headline */}
           <h1 className="text-2xl md:text-3xl font-black leading-tight mb-3">
             Mehr Kunden für dein{" "}
-            <span className="bg-gradient-to-r from-yellow-400 to-purple-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               lokales Business
             </span>
           </h1>
@@ -54,7 +54,7 @@ function WebsitePreview() {
 
           {/* CTA */}
           <div className="flex gap-3">
-            <a href="#kontakt" className="px-4 py-2 rounded-lg text-xs font-bold text-black bg-yellow-400 shadow-lg hover:scale-105 transition">
+            <a href="#kontakt" className="px-4 py-2 rounded-lg text-xs font-bold text-black bg-blue-400 shadow-lg hover:scale-105 transition">
               Kostenlose Analyse sichern
             </a>
             <a href="#portfolio" className="px-4 py-2 rounded-lg text-xs border border-white/10 text-white/70 hover:bg-white/5 transition">
@@ -70,9 +70,9 @@ function WebsitePreview() {
           {/* SERVICE CARDS */}
           <div className="mt-8 grid grid-cols-3 gap-3 w-full max-w-lg">
             {[
-              { label: "Webdesign", color: "#E8E440" },
+              { label: "Webdesign", color: "#109de6" },
               { label: "Development", color: "#9D5FF5" },
-              { label: "Local SEO", color: "#E8E440" },
+              { label: "Local SEO", color: "#109de6" },
             ].map((s) => (
               <div
                 key={s.label}
@@ -99,7 +99,7 @@ export default function ScrollShowcase() {
           <div className="mb-6 text-center">
             <h2 className="font-black text-4xl md:text-6xl text-white leading-tight">
               Websites, die{" "}
-              <span className="bg-gradient-to-r from-yellow-400 to-purple-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 lokal Kunden bringen
               </span>
             </h2>

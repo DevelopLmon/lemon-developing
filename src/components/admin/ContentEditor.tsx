@@ -35,7 +35,7 @@ export default function ContentEditor({ id, label, value }: { id: string; label:
             rows={3}
             className="w-full px-4 py-2.5 rounded-xl text-sm outline-none resize-none transition-all"
             style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", color: "#F0F0F8" }}
-            onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(232,228,64,0.4)")}
+            onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(16,157,230,0.4)")}
             onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)")}
           />
         ) : (
@@ -45,16 +45,16 @@ export default function ContentEditor({ id, label, value }: { id: string; label:
             onChange={(e) => setVal(e.target.value)}
             className="w-full px-4 py-2.5 rounded-xl text-sm outline-none transition-all"
             style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", color: "#F0F0F8" }}
-            onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(232,228,64,0.4)")}
+            onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(16,157,230,0.4)")}
             onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)")}
           />
         )}
         <button onClick={save} disabled={loading || val === value}
           className="w-full sm:w-auto sm:flex-shrink-0 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all disabled:opacity-40"
           style={{
-            background: saved ? "rgba(34,197,94,0.15)" : "rgba(232,228,64,0.15)",
-            color: saved ? "#22c55e" : "#E8E440",
-            border: `1px solid ${saved ? "rgba(34,197,94,0.3)" : "rgba(232,228,64,0.2)"}`,
+            background: saved ? "rgba(34,197,94,0.15)" : "rgba(16,157,230,0.15)",
+            color: saved ? "#22c55e" : "#3a96ed",
+            border: `1px solid ${saved ? "rgba(34,197,94,0.3)" : "rgba(16,157,230,0.2)"}`,
           }}>
           {loading ? "..." : saved ? "✓ Gespeichert" : "Speichern"}
         </button>

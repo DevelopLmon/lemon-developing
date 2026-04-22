@@ -129,7 +129,7 @@ const Check = () => (
     width="16" height="16" viewBox="0 0 24 24"
     fill="none" stroke="currentColor" strokeWidth="3"
     strokeLinecap="round" strokeLinejoin="round"
-    className="text-lemon flex-shrink-0"
+    className="text-blue-400 flex-shrink-0"
   >
     <path d="M20 6 9 17l-5-5" />
   </svg>
@@ -207,13 +207,13 @@ function PricingCard({ plan, index }: { plan: Plan; index: number }) {
         backdropFilter: "blur(14px)",
         WebkitBackdropFilter: "blur(14px)",
         background: plan.popular
-          ? "linear-gradient(135deg, rgba(232,228,64,0.18) 0%, rgba(232,228,64,0.06) 100%)"
+          ? "linear-gradient(135deg, rgba(16,157,230,0.18) 0%, rgba(16,157,230,0.06) 100%)"
           : "linear-gradient(135deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.04) 100%)",
         border: plan.popular
-          ? "1px solid rgba(232,228,64,0.35)"
+          ? "1px solid rgba(16,157,230,0.35)"
           : "1px solid rgba(255,255,255,0.1)",
         boxShadow: plan.popular
-          ? "0 0 60px rgba(232,228,64,0.15), 0 8px 40px rgba(0,0,0,0.5)"
+          ? "0 0 60px rgba(16,157,230,0.15), 0 8px 40px rgba(0,0,0,0.5)"
           : "0 8px 32px rgba(0,0,0,0.4)",
       }}
     >
@@ -221,8 +221,8 @@ function PricingCard({ plan, index }: { plan: Plan; index: number }) {
         <div
           className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full text-xs font-mono font-bold text-bg-base whitespace-nowrap"
           style={{
-            background: "linear-gradient(135deg, #E8E440, #B8B430)",
-            boxShadow: "0 0 20px rgba(232,228,64,0.5)",
+            background: "linear-gradient(135deg, #3a96ed, #308fb8)",
+            boxShadow: "0 0 20px rgba(16,157,230,0.5)",
           }}
         >
           Beliebteste Wahl
@@ -233,7 +233,7 @@ function PricingCard({ plan, index }: { plan: Plan; index: number }) {
       <div className="mb-3">
         <h3
           className="text-5xl font-extralight tracking-tight"
-          style={{ color: plan.popular ? "#E8E440" : "#F0F0F8" }}
+          style={{ color: plan.popular ? "#3a96ed" : "#F0F0F8" }}
         >
           {plan.name}
         </h3>
@@ -253,7 +253,7 @@ function PricingCard({ plan, index }: { plan: Plan; index: number }) {
         className="w-full h-px mb-5"
         style={{
           background: plan.popular
-            ? "linear-gradient(90deg, transparent, rgba(232,228,64,0.3), transparent)"
+            ? "linear-gradient(90deg, transparent, rgba(16,157,230,0.3), transparent)"
             : "linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent)",
         }}
       />
@@ -274,17 +274,17 @@ function PricingCard({ plan, index }: { plan: Plan; index: number }) {
           className={`w-full py-3 rounded-xl font-heading font-semibold text-sm transition-all duration-300 ${
             plan.popular
               ? "text-bg-base"
-              : "text-text-primary border border-white/15 hover:border-lemon/30 hover:bg-white/5"
+              : "text-text-primary border border-white/15 hover:border-blue-400/30 hover:bg-white/5"
           }`}
           style={
             plan.popular
               ? {
-                  background: "linear-gradient(135deg, #E8E440, #B8B430)",
-                  boxShadow: "0 0 25px rgba(232,228,64,0.35)",
+                  background: "linear-gradient(135deg, #3a96ed, #308fb8)",
+                  boxShadow: "0 0 25px rgba(16,157,230,0.35)",
                 }
               : {}
           }
-          rippleColor={plan.popular ? "rgba(0,0,0,0.15)" : "rgba(232,228,64,0.15)"}
+          rippleColor={plan.popular ? "rgba(0,0,0,0.15)" : "rgba(16,157,230,0.15)"}
         >
           {plan.cta}
         </RippleButton>
@@ -324,12 +324,12 @@ export default function Pricing({ prices }: { prices?: PricesProps }) {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="font-mono text-lemon text-sm tracking-widest uppercase">
+          <span className="font-mono #109de6 text-sm tracking-widest uppercase">
             
           </span>
           <h2 className="section-heading mt-3">
             Transparente{" "}
-            <span className="bg-gradient-to-r from-yellow-400 to-purple-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 Pakete
               </span>
           </h2>

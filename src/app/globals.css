@@ -6,7 +6,7 @@
   --bg-base: #0A0A12;
   --bg-card: rgba(255, 255, 255, 0.06);
   --border-glass: rgba(255, 255, 255, 0.12);
-  --accent-lemon: #E8E440;
+  --accent-lemon: #3a96ed;
   --accent-violet: #7C3AED;
   --text-primary: #F0F0F8;
   --text-muted: #8892A4;
@@ -33,12 +33,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(232, 228, 64, 0.3);
+  background: rgba(64, 198, 232, 0.3);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(232, 228, 64, 0.6);
+  background: rgba(64, 198, 232, 0.6);
 }
 
 @layer utilities {
@@ -55,39 +55,39 @@ body {
 
   .glass-hover:hover {
     background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(232, 228, 64, 0.3);
-    box-shadow: 0 0 30px rgba(232, 228, 64, 0.1);
+    border-color: rgba(64, 198, 232, 0.3);
+    box-shadow: 0 0 30px rgba(64, 198, 232, 0.1);
   }
 
   .text-gradient-lemon {
-    background: linear-gradient(135deg, #E8E440 0%, #B8B430 100%);
+    background: linear-gradient(135deg, #3a96ed 0%, #308fb8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-gradient-violet {
-    background: linear-gradient(135deg, #9D5FF5 0%, #7C3AED 100%);
+    background: linear-gradient(135deg, #5fd7f5 0%, #7C3AED 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-gradient-mixed {
-    background: linear-gradient(135deg, #E8E440 0%, #9D5FF5 100%);
+    background: linear-gradient(135deg, #3a96ed 0%, #9D5FF5 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-heading font-semibold text-bg-base bg-lemon transition-all duration-300;
-    box-shadow: 0 0 20px rgba(232, 228, 64, 0.3);
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-heading font-semibold text-bg-base bg-blue-400 transition-all duration-300;
+    box-shadow: 0 0 20px rgba(64, 198, 232, 0.3);
   }
 
   .btn-primary:hover {
-    @apply bg-lemon-dim scale-105;
-    box-shadow: 0 0 40px rgba(232, 228, 64, 0.5);
+    @apply bg-blue-400 scale-105;
+    box-shadow: 0 0 40px rgba(64, 198, 232, 0.5);
   }
 
   .btn-ghost {

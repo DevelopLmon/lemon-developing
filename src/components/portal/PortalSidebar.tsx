@@ -52,7 +52,7 @@ export default function PortalSidebar({ user, onNavigate }: { user: { name?: str
       style={{ background: "#0d0d18", borderRight: "1px solid rgba(255,255,255,0.07)" }}>
       <div className="px-5 py-5 flex items-center gap-3" style={{ borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
         <div className="w-8 h-8 rounded-lg flex items-center justify-center font-heading font-black text-lg flex-shrink-0"
-          style={{ background: "linear-gradient(135deg, #E8E440, #B8B430)", color: "#0A0A12" }}>
+          style={{ background: "linear-gradient(135deg, #3a96ed, #308fb8)", color: "#0A0A12" }}>
           L
         </div>
         <div>
@@ -66,7 +66,7 @@ export default function PortalSidebar({ user, onNavigate }: { user: { name?: str
         <Link href="/" onClick={onNavigate}
           className="flex items-center gap-2 px-3 py-2 rounded-xl text-xs transition-all duration-200 w-full"
           style={{ color: "#8892A4", border: "1px solid rgba(255,255,255,0.06)" }}
-          onMouseEnter={(e) => { e.currentTarget.style.color = "#E8E440"; e.currentTarget.style.borderColor = "rgba(232,228,64,0.2)"; e.currentTarget.style.background = "rgba(232,228,64,0.05)"; }}
+          onMouseEnter={(e) => { e.currentTarget.style.color = "#3a96ed"; e.currentTarget.style.borderColor = "rgba(16,157,230,0.2)"; e.currentTarget.style.background = "rgba(16,157,230,0.05)"; }}
           onMouseLeave={(e) => { e.currentTarget.style.color = "#8892A4"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.06)"; e.currentTarget.style.background = "transparent"; }}>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
             <path d="M19 12H5M5 12l7 7M5 12l7-7" />
@@ -82,9 +82,9 @@ export default function PortalSidebar({ user, onNavigate }: { user: { name?: str
             <Link key={item.href} href={item.href} onClick={onNavigate}
               className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200"
               style={{
-                background: active ? "rgba(232,228,64,0.1)" : "transparent",
-                color: active ? "#E8E440" : "#8892A4",
-                border: active ? "1px solid rgba(232,228,64,0.2)" : "1px solid transparent",
+                background: active ? "rgba(16,157,230,0.1)" : "transparent",
+                color: active ? "#3a96ed" : "#8892A4",
+                border: active ? "1px solid rgba(16,157,230,0.2)" : "1px solid transparent",
               }}>
               {item.icon}
               {item.label}

@@ -13,7 +13,7 @@ const contactMethods = [
     ),
     label: "+49 176 84066170",
     sub: "Mo bis So, 9 bis 22 Uhr",
-    color: "#E8E440",
+    color: "#3a96ed",
     href: "tel:+4917684066170",
   },
   {
@@ -98,7 +98,7 @@ export default function Contact() {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse, rgba(232,228,64,0.06) 0%, transparent 65%)",
+            "radial-gradient(ellipse, rgba(16,157,230,0.06) 0%, transparent 65%)",
         }}
       />
 
@@ -114,7 +114,7 @@ export default function Contact() {
           <h2 className="font-heading font-black text-4xl md:text-6xl text-text-primary leading-tight">
             Bereit für deine neue
             <br />
-            <span className="bg-gradient-to-r from-yellow-400 to-purple-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 Website?
               </span>
           </h2>
@@ -137,9 +137,9 @@ export default function Contact() {
               <div className="h-full flex flex-col items-center justify-center text-center py-8 gap-3">
                 <div
                   className="w-12 h-12 rounded-full flex items-center justify-center"
-                  style={{ background: "rgba(232,228,64,0.15)", border: "1px solid rgba(232,228,64,0.3)" }}
+                  style={{ background: "rgba(16,157,230,0.15)", border: "1px solid rgba(16,157,230,0.3)" }}
                 >
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8E440" strokeWidth="2.5" strokeLinecap="round">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3a96ed" strokeWidth="2.5" strokeLinecap="round">
                     <path d="M20 6 9 17l-5-5" />
                   </svg>
                 </div>
@@ -152,7 +152,7 @@ export default function Contact() {
                   {/* Name */}
                   <div className="flex flex-col gap-1.5">
                     <label className="text-sm text-text-muted">
-                      Name <span className="text-lemon">*</span>
+                      Name <span className="text-blue-400">*</span>
                     </label>
                     <input
                       name="name"
@@ -165,14 +165,14 @@ export default function Contact() {
                         background: "rgba(255,255,255,0.05)",
                         border: "1px solid rgba(255,255,255,0.1)",
                       }}
-                      onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(232,228,64,0.4)")}
+                      onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(16,157,230,0.4)")}
                       onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)")}
                     />
                   </div>
                   {/* E-Mail */}
                   <div className="flex flex-col gap-1.5">
                     <label className="text-sm text-text-muted">
-                      E-Mail <span className="text-lemon">*</span>
+                      E-Mail <span className="text-blue-400">*</span>
                     </label>
                     <input
                       name="email"
@@ -186,7 +186,7 @@ export default function Contact() {
                         background: "rgba(255,255,255,0.05)",
                         border: "1px solid rgba(255,255,255,0.1)",
                       }}
-                      onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(232,228,64,0.4)")}
+                      onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(16,157,230,0.4)")}
                       onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)")}
                     />
                   </div>
@@ -203,7 +203,7 @@ export default function Contact() {
                         background: "rgba(255,255,255,0.05)",
                         border: "1px solid rgba(255,255,255,0.1)",
                       }}
-                      onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(232,228,64,0.4)")}
+                      onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(16,157,230,0.4)")}
                       onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)")}
                     />
                   </div>
@@ -220,7 +220,7 @@ export default function Contact() {
                         background: "rgba(255,255,255,0.05)",
                         border: "1px solid rgba(255,255,255,0.1)",
                       }}
-                      onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(232,228,64,0.4)")}
+                      onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(16,157,230,0.4)")}
                       onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)")}
                     />
                   </div>
@@ -240,7 +240,7 @@ export default function Contact() {
                       background: "rgba(255,255,255,0.05)",
                       border: "1px solid rgba(255,255,255,0.1)",
                     }}
-                    onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(232,228,64,0.4)")}
+                    onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(16,157,230,0.4)")}
                     onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)")}
                   />
                 </div>
@@ -250,8 +250,8 @@ export default function Contact() {
                   disabled={loading}
                   className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-heading font-bold text-sm text-bg-base transition-all duration-300 hover:scale-[1.02] disabled:opacity-60 disabled:cursor-not-allowed"
                   style={{
-                    background: "linear-gradient(135deg, #E8E440, #B8B430)",
-                    boxShadow: "0 0 30px rgba(232,228,64,0.35)",
+                    background: "linear-gradient(135deg, #3a96ed, #2a7acc)",
+                    boxShadow: "0 0 30px rgba(58,150,237,0.35)",
                   }}
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -308,8 +308,8 @@ export default function Contact() {
                     <div
                       className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-black text-bg-base flex-shrink-0 mt-0.5"
                       style={{
-                        background: "linear-gradient(135deg, #E8E440, #B8B430)",
-                        boxShadow: "0 0 10px rgba(232,228,64,0.3)",
+                        background: "linear-gradient(135deg, #109de6, #308fb8)",
+                        boxShadow: "0 0 10px rgba(16,157,230,0.3)",
                       }}
                     >
                       {i + 1}
