@@ -50,7 +50,7 @@ export default function AdminSidebarWrapper({ user }: { user: { name?: string | 
 
       {/* Sidebar drawer */}
       <div
-        className={`md:static fixed inset-y-0 left-0 z-[60] transition-transform duration-300 ease-in-out md:translate-x-0 ${open ? "translate-x-0" : "-translate-x-full"}`}
+        className={`md:static fixed inset-y-0 left-0 z-[60] overflow-y-auto transition-transform duration-300 ease-in-out md:translate-x-0 ${open ? "translate-x-0" : "-translate-x-full"}`}
       >
         <AdminSidebar user={user} onNavigate={() => setOpen(false)} />
       </div>

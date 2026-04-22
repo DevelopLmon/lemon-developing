@@ -48,7 +48,7 @@ export default function PortalSidebar({ user, onNavigate }: { user: { name?: str
   const pathname = usePathname();
 
   return (
-    <aside className="w-60 flex-shrink-0 flex flex-col h-screen sticky top-0 overflow-y-auto"
+    <aside className="w-60 flex-shrink-0 flex flex-col min-h-full sticky top-0"
       style={{ background: "#0d0d18", borderRight: "1px solid rgba(255,255,255,0.07)" }}>
       <div className="px-5 py-5 flex items-center gap-3" style={{ borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
         <div className="w-8 h-8 rounded-lg flex items-center justify-center font-heading font-black text-lg flex-shrink-0"
