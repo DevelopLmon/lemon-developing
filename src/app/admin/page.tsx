@@ -14,7 +14,7 @@ export default async function AdminDashboard() {
   });
 
   const stats = [
-    { label: "Neue Anfragen", value: newInquiries, color: "#E8E440", icon: "💬" },
+    { label: "Neue Anfragen", value: newInquiries, color: "#109de6", icon: "💬" },
     { label: "Kunden gesamt", value: customerCount, color: "#7C3AED", icon: "👤" },
     { label: "Anfragen gesamt", value: inquiryCount, color: "#22c55e", icon: "📋" },
   ];
@@ -42,7 +42,7 @@ export default async function AdminDashboard() {
       <div className="rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
         <div className="flex items-center justify-between mb-5">
           <h2 className="font-heading font-bold text-white">Neueste Anfragen</h2>
-          <Link href="/admin/anfragen" className="text-sm transition-colors" style={{ color: "#E8E440" }}>
+          <Link href="/admin/anfragen" className="text-sm transition-colors" style={{ color: "#109de6" }}>
             Alle anzeigen →
           </Link>
         </div>
@@ -61,9 +61,9 @@ export default async function AdminDashboard() {
                 <div className="flex items-center gap-3">
                   <span className="text-xs px-2.5 py-1 rounded-full font-mono"
                     style={{
-                      background: inq.status === "NEU" ? "rgba(232,228,64,0.1)" : inq.status === "IN_BEARBEITUNG" ? "rgba(124,58,237,0.1)" : "rgba(34,197,94,0.1)",
-                      color: inq.status === "NEU" ? "#E8E440" : inq.status === "IN_BEARBEITUNG" ? "#9D5FF5" : "#22c55e",
-                      border: `1px solid ${inq.status === "NEU" ? "rgba(232,228,64,0.2)" : inq.status === "IN_BEARBEITUNG" ? "rgba(124,58,237,0.2)" : "rgba(34,197,94,0.2)"}`,
+                      background: inq.status === "NEU" ? "rgba(16,157,230,0.1)" : inq.status === "IN_BEARBEITUNG" ? "rgba(124,58,237,0.1)" : "rgba(34,197,94,0.1)",
+                      color: inq.status === "NEU" ? "#109de6" : inq.status === "IN_BEARBEITUNG" ? "#9D5FF5" : "#22c55e",
+                      border: `1px solid ${inq.status === "NEU" ? "rgba(16,157,230,0.2)" : inq.status === "IN_BEARBEITUNG" ? "rgba(124,58,237,0.2)" : "rgba(34,197,94,0.2)"}`,
                     }}>
                     {inq.status === "NEU" ? "Neu" : inq.status === "IN_BEARBEITUNG" ? "In Bearbeitung" : "Abgeschlossen"}
                   </span>

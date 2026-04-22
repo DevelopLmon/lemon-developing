@@ -49,13 +49,13 @@ const ShaderCanvas = () => {
         mask+=paintCircle(uv,center,radius-.018,.01).r;
         mask+=paintCircle(uv,center,radius+.018,.005).r;
         vec2 v=rotate2d(iTime)*uv;
-        // Lemon (#E8E440) and Violet (#7C3AED) tones
-        vec3 lemon=vec3(0.91,0.89,0.25);
+        // Blue (#3a96ed) and Violet (#7C3AED) tones
+        vec3 blue=vec3(0.227,0.588,0.929);
         vec3 violet=vec3(0.49,0.23,0.93);
-        vec3 fgColor=mix(lemon,violet,v.x*0.5+0.5);
+        vec3 fgColor=mix(blue,violet,v.x*0.5+0.5);
         fgColor=mix(fgColor,vec3(v.x,v.y,.7-v.y*v.x),0.4);
         vec3 color=mix(uBackgroundColor,fgColor,mask*0.85);
-        color=mix(color,vec3(0.91,0.89,0.25),paintCircle(uv,center,radius,.003).r);
+        color=mix(color,vec3(0.227,0.588,0.929),paintCircle(uv,center,radius,.003).r);
         gl_FragColor=vec4(color,1.);
       }`;
 

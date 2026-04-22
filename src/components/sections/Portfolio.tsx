@@ -94,7 +94,7 @@ export default function Portfolio() {
                   style={{ background: "rgba(20,20,28,0.95)", borderBottom: "1px solid rgba(255,255,255,0.08)" }}
                 >
                   <div className="w-2 h-2 rounded-full bg-red-400/70" />
-                  <div className="w-2 h-2 rounded-full bg-yellow-400/70" />
+                  <div className="w-2 h-2 rounded-full bg-blue-400/70" />
                   <div className="w-2 h-2 rounded-full bg-green-400/70" />
                   <div className="flex-1 mx-3 h-3 rounded-full" style={{ background: "rgba(255,255,255,0.07)" }} />
                 </div>

@@ -14,7 +14,7 @@ export default function GlassCard({
   children,
   className = "",
   tilt = true,
-  glowColor = "lemon",
+  glowColor = "blue",
 }: GlassCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);

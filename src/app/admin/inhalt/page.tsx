@@ -42,7 +42,7 @@ export default async function AdminInhalt() {
           <div key={section} className="rounded-2xl p-6"
             style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
             <h2 className="font-heading font-bold text-white mb-5 flex items-center gap-2">
-              <span className="w-1.5 h-5 rounded-full inline-block" style={{ background: "linear-gradient(180deg, #E8E440, #7C3AED)" }} />
+              <span className="w-1.5 h-5 rounded-full inline-block" style={{ background: "linear-gradient(180deg, #3a96ed, #7C3AED)" }} />
               {section}
             </h2>
             <div className="flex flex-col gap-4">

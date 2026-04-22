@@ -45,7 +45,7 @@ export default async function AdminKunden() {
                   </td>
                   <td className="px-5 py-4 text-sm" style={{ color: "#8892A4" }}>{c.email}</td>
                   <td className="px-5 py-4">
-                    <span className="text-sm font-mono" style={{ color: c.projects.length > 0 ? "#E8E440" : "#8892A4" }}>
+                    <span className="text-sm font-mono" style={{ color: c.projects.length > 0 ? "#3a96ed" : "#8892A4" }}>
                       {c.projects.length} Projekt{c.projects.length !== 1 ? "e" : ""}
                     </span>
                   </td>

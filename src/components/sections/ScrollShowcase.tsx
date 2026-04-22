@@ -10,7 +10,7 @@ function WebsitePreview() {
       <div className="flex items-center gap-2 px-4 py-2.5 border-b border-white/8 bg-white/4 flex-shrink-0">
         <div className="flex gap-1.5">
           <div className="w-3 h-3 rounded-full bg-red-500/60" />
-          <div className="w-3 h-3 rounded-full bg-yellow-400/60" />
+          <div className="w-3 h-3 rounded-full bg-blue-400/60" />
           <div className="w-3 h-3 rounded-full bg-green-500/60" />
         </div>
         <div className="flex-1 mx-4 h-6 rounded-md bg-white/6 flex items-center px-3">

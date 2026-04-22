@@ -36,7 +36,7 @@ export default async function AdminTeam() {
                   <td className="px-5 py-4">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0"
-                        style={{ background: "rgba(232,228,64,0.15)", color: "#E8E440" }}>
+                        style={{ background: "rgba(58,150,237,0.15)", color: "#3a96ed" }}>
                         {(m.name ?? m.username ?? m.email)[0].toUpperCase()}
                       </div>
                       <span className="text-sm font-semibold text-white">{m.name ?? "—"}</span>
@@ -44,7 +44,7 @@ export default async function AdminTeam() {
                   </td>
                   <td className="px-5 py-4">
                     <span className="font-mono text-sm px-2.5 py-1 rounded-lg"
-                      style={{ background: "rgba(232,228,64,0.08)", color: "#E8E440", border: "1px solid rgba(232,228,64,0.15)" }}>
+                      style={{ background: "rgba(58,150,237,0.08)", color: "#3a96ed", border: "1px solid rgba(58,150,237,0.15)" }}>
                       @{m.username ?? "—"}
                     </span>
                   </td>

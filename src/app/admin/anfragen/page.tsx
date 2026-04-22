@@ -7,7 +7,7 @@ export default async function AdminAnfragen() {
   });
 
   const statusColor = (s: string) => {
-    if (s === "NEU") return { bg: "rgba(232,228,64,0.1)", color: "#E8E440", border: "rgba(232,228,64,0.2)", label: "Neu" };
+    if (s === "NEU") return { bg: "rgba(16,157,230,0.1)", color: "#3a96ed", border: "rgba(16,157,230,0.2)", label: "Neu" };
     if (s === "IN_BEARBEITUNG") return { bg: "rgba(124,58,237,0.1)", color: "#9D5FF5", border: "rgba(124,58,237,0.2)", label: "In Bearbeitung" };
     return { bg: "rgba(34,197,94,0.1)", color: "#22c55e", border: "rgba(34,197,94,0.2)", label: "Abgeschlossen" };
   };
