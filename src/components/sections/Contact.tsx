@@ -12,7 +12,7 @@ const contactMethods = [
       </svg>
     ),
     label: "+49 176 84066170",
-    sub: "- Anruf oder SMS",
+    sub: "Anruf oder SMS",
     color: "#3a96ed",
     href: "tel:+4917684066170",
   },
@@ -23,7 +23,7 @@ const contactMethods = [
       </svg>
     ),
     label: "WhatsApp",
-    sub: "Schnellere Antwort",
+    sub: "Schnellste Antwort",
     color: "#22c55e",
     href: "https://wa.me/4917684066170",
   },
