@@ -21,11 +21,89 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const siteUrl = "https://coresites-studio.de";
+
 export const metadata: Metadata = {
-  title: "CoreSites-Studio | Webdesign & Development",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "CoreSites-Studio | Webdesign & Webentwicklung",
+    template: "%s | CoreSites-Studio",
+  },
   description:
-    "Moderne Websites, die begeistern. Webdesign, Development und SEO aus einer Hand.",
-  keywords: ["Webdesign", "Development", "Next.js", "SEO", "CoreSites-Studio"],
+    "Professionelles Webdesign & Webentwicklung für Unternehmen. Moderne, schnelle Websites mit Next.js — inkl. SEO, UI/UX-Design und Support. Jetzt Angebot anfragen.",
+  keywords: [
+    // Service-Keywords
+    "Webdesign",
+    "Webentwicklung",
+    "Website erstellen lassen",
+    "Homepage erstellen lassen",
+    "Webseite erstellen lassen",
+    "professionelle Website",
+    "Website für Unternehmen",
+    "moderne Website",
+    "responsive Webdesign",
+    // Technologie
+    "Next.js Agentur",
+    "React Entwicklung",
+    "TypeScript Webentwicklung",
+    "Headless CMS",
+    // SEO
+    "SEO Agentur",
+    "Suchmaschinenoptimierung",
+    "Google Ranking verbessern",
+    "Core Web Vitals",
+    "technisches SEO",
+    // Design
+    "UI UX Design",
+    "Webdesign Agentur",
+    "Figma Design",
+    // Lokal
+    "Webdesign Zeven",
+    "Webdesign Niedersachsen",
+    "Webdesign Hamburg",
+    "Webdesign Bremen",
+    "Webdesign Norddeutschland",
+    "Webdesign Deutschland",
+    // Long-tail
+    "günstige professionelle Website",
+    "Website für kleine Unternehmen",
+    "schnelle Website",
+    "Freelancer Webdesign",
+    "CoreSites Studio",
+    "CoreSites-Studio",
+  ],
+  authors: [{ name: "CoreSites-Studio", url: siteUrl }],
+  creator: "CoreSites-Studio",
+  publisher: "CoreSites-Studio",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: siteUrl,
+  },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    url: siteUrl,
+    siteName: "CoreSites-Studio",
+    title: "CoreSites-Studio | Professionelles Webdesign & Webentwicklung",
+    description:
+      "Moderne, schnelle Websites für Unternehmen. Webdesign, Next.js-Entwicklung und SEO aus einer Hand — mit persönlichem Support.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CoreSites-Studio | Webdesign & Webentwicklung",
+    description:
+      "Professionelles Webdesign & Webentwicklung. Moderne Websites mit Next.js, SEO und UI/UX-Design.",
+    creator: "@coresites",
+  },
 };
 
 export default function RootLayout({

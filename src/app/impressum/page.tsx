@@ -2,8 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Impressum | Lemon-Developing",
-  description: "Impressum von Lemon-Developing",
+  title: "Impressum",
+  description: "Impressum von CoreSites-Studio — Angaben gemäß § 5 TMG.",
+  robots: { index: false, follow: false },
 };
 
 export default function ImpressumPage() {

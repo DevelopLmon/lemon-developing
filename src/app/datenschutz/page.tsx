@@ -2,8 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung | CoreSites-Studio",
-  description: "Datenschutzerklärung von CoreSites-Studio",
+  title: "Datenschutzerklärung",
+  description: "Datenschutzerklärung von CoreSites-Studio gemäß DSGVO.",
+  robots: { index: false, follow: false },
 };
 
 export default function DatenschutzPage() {
