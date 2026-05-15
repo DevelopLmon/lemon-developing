@@ -54,40 +54,20 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Login buttons — desktop */}
-        <div className="hidden md:flex items-center gap-2">
+        {/* CTA button — desktop */}
+        <div className="hidden md:flex items-center">
           <a
-            href="/login?type=admin"
-            className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200"
+            href="#kontakt"
+            className="flex items-center gap-2 px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-200"
             style={{
-              background: "rgba(16,157,230,0.08)",
-              border: "1px solid rgba(16,157,230,0.2)",
+              background: "rgba(16,157,230,0.1)",
+              border: "1px solid rgba(16,157,230,0.25)",
               color: "#3a96ed",
             }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(16,157,230,0.15)"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(16,157,230,0.08)"; }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(16,157,230,0.18)"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(16,157,230,0.1)"; }}
           >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" />
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
-            </svg>
-            Team Login
-          </a>
-          <a
-            href="/login?type=portal"
-            className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200"
-            style={{
-              background: "rgba(255,255,255,0.06)",
-              border: "1px solid rgba(255,255,255,0.12)",
-              color: "#F0F0F8",
-            }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.1)"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.06)"; }}
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-              <circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-            </svg>
-            Kundenportal
+            Jetzt anfragen
           </a>
         </div>
 
@@ -128,27 +108,14 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <div className="flex flex-col gap-2 pt-2 border-t border-white/10">
+          <div className="pt-2 border-t border-white/10">
             <a
-              href="/login?type=admin"
+              href="#kontakt"
+              onClick={() => setMobileOpen(false)}
               className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold"
-              style={{ background: "rgba(16,157,230,0.1)", border: "1px solid rgba(16,157,230,0.2)", color: "#3a96ed" }}
+              style={{ background: "rgba(16,157,230,0.1)", border: "1px solid rgba(16,157,230,0.25)", color: "#3a96ed" }}
             >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" />
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
-              </svg>
-              Team Login
-            </a>
-            <a
-              href="/login?type=portal"
-              className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold"
-              style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "#F0F0F8" }}
-            >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-                <circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-              </svg>
-              Kundenportal
+              Jetzt anfragen
             </a>
           </div>
         </motion.div>

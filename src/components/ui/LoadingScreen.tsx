@@ -16,7 +16,7 @@ export default function LoadingScreen() {
     setVisible(true);
 
     const start = performance.now();
-    const duration = 2200;
+    const duration = 1200;
 
     const tick = (now: number) => {
       const elapsed = now - start;
@@ -29,7 +29,7 @@ export default function LoadingScreen() {
     };
     requestAnimationFrame(tick);
 
-    const timer = setTimeout(() => setVisible(false), 2600);
+    const timer = setTimeout(() => setVisible(false), 1600);
     return () => clearTimeout(timer);
   }, []);
 
